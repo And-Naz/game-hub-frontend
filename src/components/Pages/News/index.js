@@ -3,7 +3,7 @@ import React from 'react';
 function News(props) {
     return (
         <div>
-            News Page
+            News Page Component
         </div>
     );
 }
