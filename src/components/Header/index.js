@@ -2,12 +2,14 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => (
     <header className='header'>
-            <div className='containe'>
-                    <NavLink className='navLink' to=''>Home</NavLink>
-                    <NavLink className='navLink' to='gameList'>GameList</NavLink>
-                    <NavLink className='navLink' to='score'>Score</NavLink>
-                    <NavLink className='navLink' to='news'>News</NavLink>
-                    <NavLink className='navLink' to='about'>About</NavLink>
+            <div className='container'>
+                    <NavLink className='navLink' to=''>
+                        <img src="https://wp.nkdev.info/youplay/wp-content/themes/youplay/assets/images/logo-light.png" alt="" />
+                    </NavLink>
+                    <NavLink  to='gameList'>GameList</NavLink>
+                    <NavLink  to='score'>Score</NavLink>
+                    <NavLink  to='news'>News</NavLink>
+                    <NavLink  to='about'>About</NavLink>
             </div>
     </header>
 )
