@@ -5,9 +5,37 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background: rgba(8,3,37,.9);
+	font: 14px/1.42857 "Lato",sans-serif;
+	color: #fff;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+.header {
+	min-height: 50px;
+	background: rgba(8,3,37,.4);
+	border: none;
+	transition: .3s background ease;
+	align-items: center;
+	color: white;
+}
+
+.navLink {
+	color: white;
+}
+
+.content-wrap {
+	max-width: 1400px;
+	padding: 0.1px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #080325;
+}
+
+.youplay-banner {
+
 }
