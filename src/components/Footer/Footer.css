@@ -1,0 +1,21 @@
+.footer {
+    /*display: flex;*/
+    /*width: 100%;*/
+
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font: 14px/1.42857 "Lato", sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    letter-spacing: .06em;
+    line-height: 20px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
