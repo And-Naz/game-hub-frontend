@@ -20,8 +20,6 @@ function App() {
 				<Route path='news' element={<News />}/>
 				<Route path='about' element={<About />}/>
 			</Routes>
-
-
 		</>
 
 );
