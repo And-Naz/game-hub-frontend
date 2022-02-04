@@ -3,7 +3,7 @@ import React from 'react';
 function GameList(props) {
     return (
         <div>
-            GameList Page Component
+            Games Page Component
         </div>
     );
 }
