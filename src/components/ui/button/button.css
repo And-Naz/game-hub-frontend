@@ -23,8 +23,14 @@
     font-size: 18px;
 }
 
-.btn-small {
+.btn-medium {
     padding: 10px 30px;
     margin: 7px 10px 0px;
     font-size: 14px;
+}
+
+.btn-small {
+    padding: 8px 20px;
+    margin: 7px 10px 0px;
+    font-size: 12px;
 }

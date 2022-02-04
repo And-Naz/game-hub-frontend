@@ -29,6 +29,7 @@ function Home() {
 
             </div>
         </section>
+        // <div>HOME PAGE</div>
     );
 }
 

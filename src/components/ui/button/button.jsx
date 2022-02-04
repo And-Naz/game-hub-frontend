@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css'
 
-const SIZES = ['btn-large', 'btn-small'];
+const SIZES = ['btn-large', 'btn-medium', 'btn-small'];
 
 function Button({
     children,
