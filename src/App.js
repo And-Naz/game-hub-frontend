@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-// import Cards from "./components/ui/Cards"
 import CarouselBox from './components/CarouselBox';
 const cardsInfo = [{
     id:1,
@@ -59,9 +58,9 @@ const cardsInfo = [{
 function App() {
 	return (
 		<div className="App">
-			<CarouselBox info={cardsInfo} page={"Header"}/>
-			<CarouselBox info={cardsInfo} page={"Games"}/>
-			<CarouselBox info={cardsInfo} page={"Discounts"}/>
+			<CarouselBox info={cardsInfo} content={"header"}/>
+			<CarouselBox info={cardsInfo} content={"games"}/>
+			<CarouselBox info={cardsInfo} content={"discounts"}/>
 
 			{/* <header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />

@@ -1,14 +1,14 @@
 import React from "react"
-import Cards from "../ui/Cards"
+import Carousel from "../ui/Carousel"
 import YouplayBox from "../ui/YouplayBox"
 import style from "./style.css"
 
-const Games = ({info,page}) =>{
+const Games = ({info,content}) =>{
 
     return (
-        <div className="carousel-box" id={page}>
-            {page !== "Header"?<YouplayBox name={page}/>:null}
-            <Cards info = {info} page={page}/>
+        <div className="carousel-box" id={content}>
+            {content !== "header"?<YouplayBox name={content}/>:null}
+            <Carousel info = {info} content={content}/>
         </div>
     )
 }
