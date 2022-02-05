@@ -37,7 +37,7 @@ aside {
     float:right;
 }
 
-.navbar-brand {
+.logo {
     height: 33.6px;
 }
 
@@ -82,7 +82,7 @@ span button {
     height: 334px;
 }
 
-.navbar-login-form {
+.login-form {
     padding: 0 20px;
 }
 

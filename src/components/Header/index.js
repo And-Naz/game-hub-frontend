@@ -16,7 +16,7 @@ function Header() {
                 <ul>
                     <li>
                         <NavLink  to=''>
-                            <img className='navbar-brand' src="https://wp.nkdev.info/youplay/wp-content/themes/youplay/assets/images/logo-light.png" alt="" />
+                            <img className='logo' src="https://wp.nkdev.info/youplay/wp-content/themes/youplay/assets/images/logo-light.png" alt="" />
                         </NavLink>
                     </li>
                 </ul>
@@ -44,7 +44,7 @@ function Header() {
                         <span className='caret'></span>
                     </button>
                     <div className={isActive ? 'dropdown-menu clicked': 'dropdown-menu '} >
-                        <div className='navbar-login-form'>
+                        <div className='login-form'>
                             <form action="#" method='post'>
                                 <label htmlFor='userName'>Username:</label>
                                 <div><input className="login-form-inp" type="text" id='userName' name="userName" /></div>

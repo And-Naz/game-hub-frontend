@@ -1,140 +1,68 @@
+body {
+    font-family: Lato,sans-serif;
+    font-size: 14px;
+    letter-spacing: .06em;
+    line-height: 20px;
+}
 
-/*.content-wrap {*/
-/*    max-width: 1400px;*/
-/*    padding: 0.1px;*/
-/*    margin: 0 auto;*/
-/*    overflow: hidden;*/
-/*    background: #080325;*/
-/*}*/
+.container {
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 26px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 70px;
+}
 
-/*.youplay-banner {*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*    -webkit-box-align: center;*/
-/*    align-items: center;*/
-/*    -webkit-box-pack: center;*/
-/*    justify-content: center;*/
-/*    width: 100%;*/
-/*    !*min-height: 550px;*!*/
-/*    overflow: hidden;*/
-/*    !*background: #160962;*!*/
-/*}*/
+.img-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: -100;
+    pointer-events: none;
+}
 
-/*.youplay-banner.banner-top {*/
-/*    padding-top: 80px;*/
-/*}*/
+.img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    max-width: none;
+    position: fixed;
+    top: 0px;
+    left: 59.7px;
+    overflow: hidden;
+    pointer-events: none;
 
-/*!*.youplay-banner .info h2 {*!*/
-/*!*    font-size: 50px;*!*/
-/*!*    margin-top: 0;*!*/
-/*!*    margin-bottom: 2.5rem;*!*/
-/*!*    line-height: 55px;*!*/
-/*!*    text-transform: uppercase;*!*/
+}
 
+.layer {
+    background-color: rgba(22,9,98, 0.5);
+    position: absolute;
+    left: 60px;
+    width: 1400px;
+    height: 100%;
+}
 
-/*!*    display: block;*!*/
+h1 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 55px;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    font-weight: 500;
+    word-wrap: break-word;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 
-/*!*    margin-block-start: 0.83em;*!*/
-/*!*    margin-block-end: 0.83em;*!*/
-/*!*    margin-inline-start: 0px;*!*/
-/*!*    margin-inline-end: 0px;*!*/
-/*!*    font-weight: bold;*!*/
-/*!*}*!*/
-
-
-/*h2 {*/
-/*    font-size: 50px;*/
-/*    line-height: 55px;*/
-/*    margin-bottom: 2.5rem;*/
-/*    font-weight: 500;*/
-/*    margin-block-start: 0.83em;*/
-/*    margin-block-end: 0.83em;*/
-/*    margin-inline-start: 0px;*/
-/*    margin-inline-end: 0px;*/
-/*    text-transform: uppercase;*/
-/*}*/
-
-
-/*p {*/
-/*    font-family: Lato,sans-serif;*/
-/*    !*margin-top: 1rem;*!*/
-/*    !*margin-bottom: 1rem;*!*/
-/*    margin: 10px 0;*/
-/*    display: block;*/
-/*    margin-block-start: 1em;*/
-/*    margin-block-end: 1em;*/
-/*    margin-inline-start: 0px;*/
-/*    margin-inline-end: 0px;*/
-/*}*/
-
-
-/*.youplay-banner .image {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: 50% 50%;*/
-/*    background-size: cover;*/
-/*    opacity: .5;*/
-/*    z-index: 0;*/
-/*}*/
-
-/*.jarallax-container-2 {*/
-/*    position: absolute;*/
-/*    top: 0px;*/
-/*    left: 0px;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    overflow: hidden;*/
-/*    pointer-events: none;*/
-/*    z-index: -100;*/
-/*}*/
-
-/*.jarallax-img {*/
-/*    !*width: 1400px;*!*/
-/*    !*height: 645px;*!*/
-/*    object-fit: cover;*/
-/*    object-position: 50% 50%;*/
-/*    max-width: none;*/
-/*    position: fixed;*/
-/*    top: 0px;*/
-/*    left: 59.7px;*/
-/*    width: 1399.8px;*/
-/*    height: 645.2px;*/
-/*    overflow: hidden;*/
-/*    pointer-events: none;*/
-/*    margin-top: 26.4px;*/
-/*    transform: translate(0px, -26.36px);*/
-/*}*/
-
-/*.container {*/
-/*    padding-right: 15px;*/
-/*    padding-left: 15px;*/
-/*    margin-right: auto;*/
-/*    margin-left: auto;*/
-/*    width: 1170px*/
-/*}*/
-
-/*.youplay-banner .info {*/
-/*    position: relative;*/
-/*    width: 100%;*/
-/*    padding: 80px 0;*/
-/*}*/
-
-/*.info {*/
-/*    opacity: 0.999709;*/
-/*    transform: translate(0px, -0.0436047px);*/
-/*}*/
-
-/*.header .navbar-brand {*/
-/*    width: 160px;*/
-/*    display: block;*/
-/*    display: inline-block;*/
-/*    height: 33.6px;*/
-/*    padding: 0;*/
-/*    line-height: 75px;*/
-/*    transition: .3s ease;*/
-/*    will-change: height,width,line-height;*/
-/*}*/
+p {
+    padding-bottom: 25px;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
