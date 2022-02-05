@@ -1,13 +1,12 @@
-import React,{useState,useEffect} from "react"
+import React,{useState,useEffect,Suspense ,lazy  } from "react"
 // import { NavLink } from "react-router-dom"
 import Slider from 'infinite-react-carousel';
-
-// lazy load petqa lini
-import Header from "./Header";
-import Games from "./Games";
-import Discounts from "./Discounts";
-
 import style from "./style.css"
+
+const Header = React.lazy(() => import("./HeaderContent"));
+const Games = React.lazy(() => import("./GamesContent"));
+const Discounts = lazy(() => import("./DiscountsContent"));
+
 
 const initialDefault = {
     dots:false, 
@@ -15,13 +14,12 @@ const initialDefault = {
     arrows:false,
     slidesToShow:4
 }
-// const cardStyle = {}
-const Cards = ({info = [],}) =>{
+const Cards = ({info = [],page}) =>{
+    console.log(page,'page')
     const [cardInfo , setCardInfo] = useState(info)
     const [settings, setSettings] = useState(initialDefault)
     useEffect(() => {
         window.addEventListener('resize', cardsPosition)
-        // cardsPosition()
         return ()=>{
             console.log('remove addEventListener')
         }
@@ -51,33 +49,38 @@ const Cards = ({info = [],}) =>{
                 ['slidesToShow']:4
             }))
         }
-    //     // const changeContent = content.map((el,index)=>{
-    //     //     el.style = {
-    //     //         left:responsWidth * index,
-    //     //         width: `${responsWidth}px`,
-    //     //     }
-    //     //     return el
-    //     // })
-    //     // setCardInfo(changeContent)
     }
     return (
         <div className="slider " >
-                
-            {console.log(settings,'settings')}
             <Slider {...settings} >
             {
             cardInfo.map(el =>
-                <div  key={el.id}>
-                <div className="card each-slide" style={el.style}>
-                    {/* <NavLink  to={el.gameUrl} className="card__link"> */}
-                        <div className="card__item">
-                            <img className="card__img" src={el.url}/>  
-                        </div>
-                    {/* </NavLink> */}
-                </div>
-                    {/* <Header name={el.name}/> */}
-                    {/* <Games name={el.name}/> */}
-                    <Discounts name={el.name}/>
+                <div  key={el.id} className="each-slide">
+                    <div className="card " style={el.style}>
+                        {/* <NavLink  to={el.gameUrl} className="card__link"> */}
+                            <div className="card__item">
+                                <img className="card__img" src={el.url}/>  
+                            </div>
+                        {/* </NavLink> */}
+                    </div>
+                    {page === "Header"?
+                    <Suspense fallback={<div>Loading</div>}>
+                        <Header name={el.name} />
+                    </Suspense>
+                    :null
+                    }
+                    {page === "Games"?
+                    <Suspense fallback={<div>Loading</div>}>
+                        <Games name={el.name} rating={el.rating} price={el.price} sale={el.sale} saleFrom={el.saleFrom}/>
+                    </Suspense>
+                    :null
+                    }
+                     {page === "Discounts"?
+                    <Suspense fallback={<div>Loading</div>}>
+                        <Discounts name={el.name} rating={el.rating} price={el.price} sale={el.sale} saleFrom={el.saleFrom}/>
+                    </Suspense>
+                    :null
+                    }
                 </div>)
                 }
             </Slider>

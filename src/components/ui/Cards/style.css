@@ -18,6 +18,7 @@
     background: rgba(8,3,37,.9);
     cursor: pointer;
 }
+
 .slider:active{
     cursor: grabbing;
 }
@@ -46,9 +47,14 @@
     -webkit-backface-visibility: hidden;
     max-height: 200px;
 }
+.each-slide .card__img{
+    opacity: .5;
+}
+.each-slide:hover .card__img{
+    opacity: .7;
+}
 .card__img{
     width: 100%;
-    opacity: .5;
     -webkit-transition: .3s opacity ease;
     -o-transition: .3s opacity ease;
     transition: .3s opacity ease;
@@ -60,7 +66,4 @@
     vertical-align: middle;
     margin: 0!important;
     max-width: 100%;    
-}
-.card__img:hover{
-    opacity: 1;
 }

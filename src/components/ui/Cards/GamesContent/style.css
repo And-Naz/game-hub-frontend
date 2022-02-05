@@ -27,7 +27,10 @@
     line-height: 20px;
     font-family: lato,sans-serif;
     color: #fff;
+    text-transform: capitalize;
+
 }
+
 @media only screen and (max-width: 1200px) {
     .over-info h4 {
         font-size: 18px;

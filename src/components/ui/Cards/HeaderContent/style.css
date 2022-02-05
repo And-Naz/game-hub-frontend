@@ -27,28 +27,8 @@
     line-height: 20px;
     font-family: lato,sans-serif;
     color: #fff;
-}
-.rating {
-    position: relative;
-    display: inline-block;
-}
-.rating-front{
-    position: absolute;
-    overflow: hidden;
-    white-space: nowrap;
-    
-}
-.rating-back {
-    white-space: nowrap;
-}
-.svg-inline--fa {
-    overflow: visible;
-    width: 1.125em;
-    display: inline-block;
-    font-size: inherit;
-    height: 1em;
-    overflow: visible;
-    vertical-align: -0.125em;
+    text-transform: capitalize;
+
 }
 @media only screen and (max-width: 1200px) {
     .over-info h4 {

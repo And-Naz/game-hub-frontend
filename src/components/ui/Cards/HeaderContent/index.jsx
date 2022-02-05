@@ -1,11 +1,11 @@
-import React,{useState,useEffect} from "react"
+import React from "react"
 
 import style from "./style.css"
 
-const Header = ({name}) =>{
+const HeaderContent = ({name}) =>{
 
     return (
-       <div class="over-info">
+       <div className="over-info">
            <div>
                <div>
                    <h4>{name}</h4>
@@ -15,4 +15,4 @@ const Header = ({name}) =>{
     )
 }
 
-export default Header
+export default HeaderContent
