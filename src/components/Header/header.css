@@ -4,8 +4,9 @@ a.navLink {
     text-decoration: none;
     color: white;
     padding-right: 15px;
-    padding-left: 25px;
+    padding-left: 15px;
     text-transform: uppercase;
+
 }
 
 .header {
@@ -21,11 +22,17 @@ a.navLink {
     display: flex;
     max-width: 800px;
     min-width: 320px;
-    margin-left: 200px;
+    margin-left: 150px;
+}
+
+
+li {
+    list-style-type: none;
+    float: left;
 }
 
 aside {
-    margin-left: 450px;
+    margin-left: 400px;
     margin-top: 30px;
     float:right;
 }
@@ -53,7 +60,6 @@ span button {
     margin-left: 2px;
     vertical-align: middle;
     border-top: 4px dashed;
-    border-width: 3px;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     color: white;
@@ -61,7 +67,6 @@ span button {
 
 
 .dropdown-menu.clicked{
-
     display: none;
 }
 
@@ -77,8 +82,6 @@ span button {
     height: 334px;
 }
 
-
-
 .navbar-login-form {
     padding: 0 20px;
 }
@@ -87,8 +90,8 @@ label{
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     font: 14px/1.42857 "Lato",sans-serif;
 }
 

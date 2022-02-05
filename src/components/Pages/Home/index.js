@@ -22,7 +22,6 @@ function Home() {
                             <strong>Virtus PRO</strong> vs <strong>Team Secret</strong>
                         </p>
                         <Button children='Learn More' type='button' buttonSize='btn-large' />
-
                     </div>
                 </div>
 

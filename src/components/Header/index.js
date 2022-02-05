@@ -13,13 +13,27 @@ function Header() {
     return (
         <header className='header'>
             <nav className='navigation'>
-                <NavLink  to=''>
-                    <img className='navbar-brand' src="https://wp.nkdev.info/youplay/wp-content/themes/youplay/assets/images/logo-light.png" alt="" />
-                </NavLink>
-                <NavLink className='navLink' to='games'>Games</NavLink>
-                <NavLink className='navLink' to='score'>Score</NavLink>
-                <NavLink className='navLink' to='news'>News</NavLink>
-                <NavLink className='navLink' to='about'>About</NavLink>
+                <ul>
+                    <li>
+                        <NavLink  to=''>
+                            <img className='navbar-brand' src="https://wp.nkdev.info/youplay/wp-content/themes/youplay/assets/images/logo-light.png" alt="" />
+                        </NavLink>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <NavLink className='navLink' to='games'>Games</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='navLink' to='score'>Score</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='navLink' to='news'>News</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='navLink' to='about'>About</NavLink>
+                    </li>
+                </ul>
             </nav>
             <aside>
                 <span className='dropdown dropdown-user'>
@@ -32,14 +46,14 @@ function Header() {
                     <div className={isActive ? 'dropdown-menu clicked': 'dropdown-menu '} >
                         <div className='navbar-login-form'>
                             <form action="#" method='post'>
-                                <label for='userName'>Username:</label>
+                                <label htmlFor='userName'>Username:</label>
                                 <div><input className="login-form-inp" type="text" id='userName' name="userName" /></div>
-                                <label for='password'>Password:</label>
+                                <label htmlFor='password'>Password:</label>
                                 <div><input className="login-form-inp" type="password" id='password' name="password" /></div>
 
                                 <div className='checkbox'>
                                     <input className="login-form-checkbox" type="checkbox" id='checkbox' name="checkbox"/>
-                                    <label for='checkbox'>Remember Me</label>
+                                    <label htmlFor='checkbox'>Remember Me</label>
                                 </div>
                                 <Button type='submit' buttonSize='btn-small' children='Log In' />
                                 <div className="lostPwd">
