@@ -1,0 +1,37 @@
+.bottom-info {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    width: 80%;
+}
+.bottom-info .h4 {
+    position: relative;
+    margin-top: 1.8rem;
+    margin-bottom: 3rem!important;
+    text-align: center;
+    font-weight: 600;
+}
+.rating {
+    position: relative;
+    display: inline-block;
+}
+.rating-front{
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+.rating-back {
+    white-space: nowrap;
+}
+@media only screen and (max-width: 1200px) {
+    .over-info h4 {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .over-info h4 {
+        font-size: 16px;
+    }
+}
