@@ -54,6 +54,10 @@
 	position: absolute;
 	top: 50%;
 	left: 0%;
-	transform: translate(40%, -50%);
+	transform: translate(30%, -50%);
+	font-size: 14px;
+	font-family: Lato, sans-serif;
+	letter-spacing: 0.6rem;
+	line-height: 20px;
 }
 
