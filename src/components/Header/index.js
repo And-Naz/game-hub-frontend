@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
-import './header.css'
 import Button from "../ui/button/button";
+import log from "../../assets/images/header_logo.png"
+import './header.css'
 
 const Header = () => (
 	<header className='header'>
 		<div className='container'>
 			<NavLink to=''>
-				<img className='navbar-brand' src="https://wp.nkdev.info/youplay/wp-content/themes/youplay/assets/images/logo-light.png" alt="" />
+				<img className='navbar-brand' src={log} alt="" />
 			</NavLink>
 			<NavLink className='navLink' to='games'>Games</NavLink>
 			<NavLink className='navLink' to='score'>Score</NavLink>
