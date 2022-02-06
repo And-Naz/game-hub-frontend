@@ -1,25 +1,23 @@
+import { Suspense } from "react"
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import Games from "./pages/Games";
-import Score from "./pages/Score";
-import News from "./pages/News";
-import About from "./pages/About";
+import pages from "./pages"
 import './assets/css/App.css';
-
-
-
 function App() {
 	return (
 		<>
 			<Header />
-			<Routes>
-				<Route path='' element={<Home />} />
-				<Route path='games' element={<Games />} />
-				<Route path='score' element={<Score />} />
-				<Route path='news' element={<News />} />
-				<Route path='about' element={<About />} />
-			</Routes>
+			<Suspense fallback={<div>Loading...</div>}>
+				<Routes>
+					{
+						pages.map(({ path, component }) => {
+							return (
+								<Route key={path} path={path} element={component} />
+							)
+						})
+					}
+				</Routes>
+			</Suspense>
 		</>
 
 	);
