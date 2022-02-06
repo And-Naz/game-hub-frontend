@@ -5,16 +5,14 @@
 	position: relative;
 	background-color: transparent;
 	cursor: pointer;
-	overflow: hidden;
-	outline: none;
 	border: 2px solid white;
 	transform:skew(-7deg)
 }
 
 .btn:hover {
 	background-color: rgba(247, 28, 28, 0.7);
-	transition: 0.3s ease;
-	border: rgba(247, 28, 28, 0.7);
+	transition: 0.3s;
+	border: 2px solid transparent;
 }
 
 .btn-large {
