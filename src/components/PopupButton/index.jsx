@@ -2,7 +2,7 @@ import { useState, forwardRef, useCallback } from "react";
 import Button from "../ui/Button";
 import "./style.css"
 import SignIn from "../AuthComponent/SignIn";
-const PopupButton = forwardRef(function ({ children }, ref) {
+const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 	const [showPopup, setShowPopup] = useState(false)
 	const onClickBtn = useCallback(() => { setShowPopup(prev => !prev) }, [])
 	const onBlurBtn = useCallback(() => { /* setShowPopup(false) */ }, [])
@@ -19,7 +19,7 @@ const PopupButton = forwardRef(function ({ children }, ref) {
 			{
 				showPopup &&
 				<div className="popup-btn__popup-element">
-					<SignIn />
+					{popupElement}
 				</div>
 			}
 		</button>
