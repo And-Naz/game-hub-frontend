@@ -4,10 +4,9 @@ import './home.css'
 
 function Home() {
 	return (
-		<section>
+		<section className="page">
 			<div className='img-container'>
 				<Image className='img-background' src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/06/banner-bg.jpg" alt="home" />
-				<div className='color-overlay'></div>
 			</div>
 			<div className='info-container'>
 				<h1 className='info__header'>

@@ -7,17 +7,19 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Suspense fallback={<div>Loading...</div>}>
-				<Routes>
-					{
-						pages.map(({ path, component }) => {
-							return (
-								<Route key={path} path={path} element={component} />
-							)
-						})
-					}
-				</Routes>
-			</Suspense>
+			<main className="page-wrapper">
+				<Suspense fallback={<div>Loading...</div>}>
+					<Routes>
+						{
+							pages.map(({ path, component }) => {
+								return (
+									<Route key={path} path={path} element={component} />
+								)
+							})
+						}
+					</Routes>
+				</Suspense>
+			</main>
 		</>
 
 	);
