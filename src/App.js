@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/Pages/Home";
-import Games from "./components/Pages/Games";
-import Score from "./components/Pages/Score";
-import News from "./components/Pages/News";
-import About from "./components/Pages/About";
+import Home from "./Pages/Home";
+import Games from "./Pages/Games";
+import Score from "./Pages/Score";
+import News from "./Pages/News";
+import About from "./Pages/About";
 import './assets/css/App.css';
 
 
