@@ -1,23 +1,32 @@
-import logo300x200 from './assets/images/300x200.jpg';
-import logo500x375 from './assets/images/500x375.jpg';
-import logo1400x775 from './assets/images/1400x775.jpg';
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Pages/Home";
+import Games from "./components/Pages/Games";
+import Score from "./components/Pages/Score";
+import News from "./components/Pages/News";
+import About from "./components/Pages/About";
 import './assets/css/App.css';
-import Image from './components/ui/Image';
+
+
 
 function App() {
 	return (
-		<div className="app">
-			<header>
-				<Image src={logo300x200} alt="logo 300x200" size="small"/>
-			</header>
-			<header>
-				<Image src={logo500x375} alt="logo 500x375" size="medium"/>
-			</header>
-			<header>
-				<Image src={logo1400x775} alt="logo 1400x775" size="big"/>
-			</header>
-		</div>
+		<>
+			<Header />
+			<Routes>
+				<Route path='' element={<Home />} />
+				<Route path='games' element={<Games />} />
+				<Route path='score' element={<Score />} />
+				<Route path='news' element={<News />} />
+				<Route path='about' element={<About />} />
+			</Routes>
+		</>
+
 	);
 }
+
+
+
+
 
 export default App;

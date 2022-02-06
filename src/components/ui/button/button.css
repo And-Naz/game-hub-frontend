@@ -1,0 +1,36 @@
+.btn {
+    font-family: Lato,sans-serif;
+    letter-spacing: .06em;
+    color: white;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    border: 2px solid white;
+    transform:skew(-7deg)
+}
+
+.btn:hover {
+    background-color: rgba(247, 28, 28, 0.7);
+    transition: 0.3s ease;
+    border: rgba(247, 28, 28, 0.7);
+}
+
+.btn-large {
+    padding: 15px 50px;
+    margin: 0px 10px;
+    font-size: 18px;
+}
+
+.btn-medium {
+    padding: 10px 30px;
+    margin: 7px 10px 0px;
+    font-size: 14px;
+}
+
+.btn-small {
+    padding: 8px 20px;
+    margin: 7px 10px 0px;
+    font-size: 12px;
+}
