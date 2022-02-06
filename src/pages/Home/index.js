@@ -1,4 +1,6 @@
-import Button from "../../components/ui/button/button";
+import Image from "../../components/ui/Image";
+import Button from "../../components/ui/Button";
+import ImageSrc from "../../assets/images/1400x775.jpg"
 import './home.css'
 
 function Home() {
@@ -7,7 +9,7 @@ function Home() {
 			<div className='youplay-banner-parallax youplay-banner youplay-banner-id-1 mid banner-top'>
 				<div className='image'>
 					<div className="jarallax-container-2">
-						<img className='jarallax-img' src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/06/banner-bg.jpg" />
+						<Image className='jarallax-img' src={ImageSrc} alt="home" />
 					</div>
 				</div>
 				<div className='info'>
@@ -23,12 +25,8 @@ function Home() {
 						<Button children='Learn More' />
 					</div>
 				</div>
-
-
-
 			</div>
 		</section>
-		// <div>HOME PAGE</div>
 	);
 }
 

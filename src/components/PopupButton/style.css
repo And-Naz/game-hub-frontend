@@ -1,0 +1,103 @@
+.popup-btn {
+	background: transparent;
+	border: none;
+	position: relative;
+	padding: 5px;
+}
+
+.popup-btn:hover {
+	cursor: pointer;
+}
+
+
+.popup-btn__caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	vertical-align: middle;
+	border-top: 4px dashed;
+	border-width: 3px;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	color: white;
+	position: absolute;
+	top: 35%;
+	right: -5px;
+}
+
+.popup-btn__popup-element {
+	position: absolute;
+	left: -115px;
+	top: 65px;
+}
+
+
+.navbar-login-form {
+	color: #fff;
+	word-wrap: break-word;
+	font-family: Lato,sans-serif;
+	letter-spacing: .06em;
+	line-height: 20px;
+	box-sizing: border-box;
+	position: absolute;
+	float: left;
+	min-width: 160px;
+	margin: 2px 0 0;
+	text-align: left;
+	list-style: none;
+	border-radius: 0;
+	box-shadow: none;
+	transition: .2s visibility ease,.2s opacity ease,.2s transform ease;
+	background: rgba(8,3,37,.8);
+	border: none;
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+	padding: 15px;
+	transition: .2s visibility ease,.2s opacity ease,.2s transform ease;
+	transform: translateY(10px);
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	position: absolute;
+	text-align: left;
+	width: 300px;
+	height: 334px;
+}
+
+p{
+	margin: 10px 0;
+	font: 14px/1.42857 "Lato",sans-serif;
+}
+
+.lostPwd {
+	margin-top: 10px;
+}
+
+.login-form-inp{
+	width: 260px;
+	height: 40px;
+	background-color: white;
+	background-color: rgba(68, 41, 125, 0.2);
+	border: none;
+	transform:skew(-7deg);
+}
+
+.login-form-checkbox {
+	width: 25px;
+	height: 25px;
+	transform:skew(-7deg);
+	margin-right: 30px;
+	background-color: rgba(68, 41, 125, 0.2);
+}
+
+.checkbox {
+	padding: 0 0 5px 5px;
+}
+
+.lwa-status {
+	display: none;
+	padding: 10px 0;
+	margin: 0 0 5px;
+	color: #333;
+	border-radius: 3px;
+}
