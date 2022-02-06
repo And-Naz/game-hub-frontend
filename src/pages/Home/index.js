@@ -1,6 +1,5 @@
-import React from 'react';
-import './home.css'
 import Button from "../../components/ui/button/button";
+import './home.css'
 
 function Home() {
 	return (

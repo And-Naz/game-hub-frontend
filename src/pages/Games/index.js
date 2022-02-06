@@ -1,11 +1,9 @@
-import React from 'react';
-
 function GameList(props) {
-    return (
-        <div>
-            Games Page Component
-        </div>
-    );
+	return (
+		<section>
+			Games Page Component
+		</section>
+	);
 }
 
 export default GameList;

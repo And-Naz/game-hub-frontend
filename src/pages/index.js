@@ -4,6 +4,7 @@ const Games = lazy(() => import('./Games'))
 const Score = lazy(() => import('./Score'))
 const News = lazy(() => import('./News'))
 const About = lazy(() => import('./About'))
+const NotFount = lazy(() => import('./NotFount'))
 
 const pages = [
 	{
@@ -25,6 +26,10 @@ const pages = [
 	{
 		path: "/about",
 		component: <About />,
+	},
+	{
+		path: "*",
+		component: <NotFount />,
 	}
 ]
 

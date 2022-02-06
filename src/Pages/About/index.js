@@ -1,11 +1,9 @@
-import React from 'react';
-
 function About(props) {
-    return (
-        <div>
-            About Page Component
-        </div>
-    );
+	return (
+		<section>
+			About Page Component
+		</section>
+	);
 }
 
 export default About;

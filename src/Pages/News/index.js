@@ -1,11 +1,9 @@
-import React from 'react';
-
 function News(props) {
-    return (
-        <div>
-            News Page Component
-        </div>
-    );
+	return (
+		<section>
+			News Page Component
+		</section>
+	);
 }
 
 export default News;
