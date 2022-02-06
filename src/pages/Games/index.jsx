@@ -1,4 +1,4 @@
-function GameList(props) {
+function Games(props) {
 	return (
 		<section>
 			Games Page Component
@@ -6,4 +6,4 @@ function GameList(props) {
 	);
 }
 
-export default GameList;
+export default Games;
