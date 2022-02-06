@@ -1,0 +1,42 @@
+.card .card__img{
+    opacity: .5;
+}
+.card:hover .card__img{
+    opacity: .7;
+}
+.card__link{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    position: relative;
+    display: block;
+}
+.card__shape{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #160962;
+    -webkit-transform: skew(-7deg);
+    -ms-transform: skew(-7deg);
+    transform: skew(-7deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-backface-visibility: hidden;
+    max-height: 200px;
+}
+
+.card__img{
+    width: 100%;
+    -webkit-transition: .3s opacity ease;
+    -o-transition: .3s opacity ease;
+    transition: .3s opacity ease;
+    -webkit-transform: skew(7deg) scale(1.098);
+    -ms-transform: skew(7deg) scale(1.098);
+    transform: skew(7deg) scale(1.098);
+    -webkit-backface-visibility: hidden;
+    height: auto;
+    vertical-align: middle;
+    margin: 0!important;
+    max-width: 100%;    
+}
