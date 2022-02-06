@@ -6,8 +6,8 @@ function Home() {
 	return (
 		<section>
 			<div className='img-container'>
-				<Image src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/06/banner-bg.jpg" alt="home" />
-				{/*<div className='layer'></div>*/}
+				<Image className='img-background' src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/06/banner-bg.jpg" alt="home" />
+				<div className='color-overlay'></div>
 			</div>
 			<div className='info-container'>
 				<h1 className='info__header'>
