@@ -12,8 +12,8 @@ const Tags = ({tags}) => {
                 
                    {
                     tags?.map(el=>
-                    <a href={el.url} className="tag__link">
-                            <span key={el.id}>{el.name},</span>
+                        <a key={el.id} href={el.url} className="tag__link">
+                            <span >{el.name},</span>
                         </a>
                     )
                    }
