@@ -17,3 +17,9 @@ a.tag__link {
 a.tag__link:hover {
     color: #d92b4c;
 }
+@media (max-width: 630px)
+{
+    .tags{
+        text-align: center;
+    }
+}

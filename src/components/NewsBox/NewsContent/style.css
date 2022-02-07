@@ -27,7 +27,6 @@ span.news-content__date-box {
     margin: 0;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    text-align: left;
 }
 .news-content__link{
     transition: .3s color ease;
@@ -43,5 +42,15 @@ span.news-content__date-box {
     .news-content__entry-header{
         align-items: baseline;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 630px)
+{
+    .news-content__entry-header{
+        align-items: center;
+    }
+    .news__content.news-content {
+        text-align: center;
     }
 }
