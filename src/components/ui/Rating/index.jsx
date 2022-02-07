@@ -5,7 +5,7 @@ import style from "./style.css"
 const Rating = ({rating}) =>{
     // const [formUserRating,setformUserRating] = useState(rating)
     const userVote = false
-    const userRating = useRef(rating)
+    const userRating = useRef(`${rating}%`)
     const ratingbox = useRef()
     const frontRating = useRef()
 

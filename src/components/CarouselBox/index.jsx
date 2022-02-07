@@ -7,7 +7,7 @@ const Games = ({info,content}) =>{
 
     return (
         <div className="carousel-box" id={content}>
-            {content !== "header"?<YouplayBox name={content}/>:null}
+            {content !== "Header"?<YouplayBox name={content} href={true}/>:null}
             <Carousel info = {info} content={content}/>
         </div>
     )

@@ -1,12 +1,12 @@
 import React from "react"
 import Rating from "../../Rating"
 import Price from "../Price"
-import style from "./style.css"
+import style from "./style.module.css"
 
 const DiscountsContent = (props) =>{
     const {name,rating,price,sale,saleFrom} = props
     return (
-        <div className="bottom-info">
+        <div className={style['bottom-info']}>
             <h4>{name} </h4>
             <div className="row">
                 <div className="col">

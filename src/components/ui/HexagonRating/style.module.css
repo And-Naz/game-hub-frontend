@@ -1,0 +1,105 @@
+  .hexagonRating{
+    position: relative;
+    background: #0000;
+    width: 240px;
+    height: 265px;
+    zoom: 20%;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 14px/1.42857 "Lato",sans-serif;
+    letter-spacing: .06em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-wrap: break-word;
+    cursor: pointer;
+  }
+  .hexagonRating span{
+    color: white;
+    font-size: 70px;
+    opacity: .6;
+    transition:  0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .hexagonRating:hover span{
+    opacity: 1;
+  }
+  .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) rotate(30deg);
+  }
+  
+  /* End of container */
+  .button {
+    cursor: pointer;
+    width: 200px;
+    height: 173.2050807569px;
+    float: left;
+  }
+  .button:last-child {
+    margin-right: 0;
+  }
+  .hexagonRating:hover .hex:last-child {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  .hexagonRating:hover .hex:first-child {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  .hexagonRating:hover .hex:first-child div:before, .hexagonRating:hover .hex:first-child div:after {
+    height: 15px;
+  }
+  
+  .hex {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 100px;
+    height: 173.2050807569px;
+    opacity: 0.5;
+  }
+  .hex:first-child {
+    transform: scale(0.9);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 0;
+  }
+  .hex:last-child {
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1;
+  }
+  .hex div {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 173.2050807569px;
+    transform-origin: center center;
+  }
+  .hex div:before, .hex div:after {
+    content: " ";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 1px;
+    transition: height 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .hex div:before {
+    top: 0;
+    left: 0;
+  }
+  .hex div:after {
+    bottom: 0;
+    left: 0;
+  }
+  .hex div:nth-child(1) {
+    transform: rotate(0deg);
+  }
+  .hex div:nth-child(2) {
+    transform: rotate(60deg);
+  }
+  .hex div:nth-child(3) {
+    transform: rotate(120deg);
+  }

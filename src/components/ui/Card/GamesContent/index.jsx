@@ -1,12 +1,12 @@
 import React from "react"
 import Rating from "../../Rating"
 import Price from "../Price"
-import style from "./style.css"
+import style from "./style.module.css"
 
 const GamesContent = (props) =>{
     const {name,rating,price,sale,saleFrom} = props
     return (
-        <div className="over-info">
+        <div className={style['over-info']}>
             <div>
                 <div>
                     <h4>{name}</h4>

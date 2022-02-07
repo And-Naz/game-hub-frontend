@@ -1,3 +1,7 @@
+.card{
+    position: relative;
+    height: max-content;
+}
 .card .card__img{
     opacity: .5;
 }
@@ -23,7 +27,7 @@
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-backface-visibility: hidden;
-    max-height: 200px;
+    max-height: 230px;
 }
 
 .card__img{

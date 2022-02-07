@@ -1,9 +1,9 @@
-import style from "./style.css"
+import style from "./style.module.css"
 
 const HeaderContent = ({name}) =>{
 
     return (
-       <div className="over-info">
+       <div className={style['over-info']}>
            <div>
                <div>
                    <h4>{name}</h4>
