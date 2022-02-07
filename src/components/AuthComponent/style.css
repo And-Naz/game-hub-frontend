@@ -29,7 +29,6 @@ label{
     border: 2px solid white;
     transform:skew(-7deg);
     color: white;
-
 }
 
 .login-form-checkbox {
@@ -49,5 +48,28 @@ label{
     vertical-align: middle;
 }
 
+.navbar-login-form, .navbar-signup-form {
+    color: #fff;
+    letter-spacing: .06em;
+    line-height: 20px;
+    text-align: left;
+    background: rgba(8,3,37,.8);
+    padding: 15px;
+}
 
+.gender_container {
+    display: flex;
+    border: 2px solid white;
+}
+
+.male_container label, input {
+    padding-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.female_container label, input {
+    padding-left: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
 
