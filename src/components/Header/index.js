@@ -4,7 +4,8 @@ import UserIcon from "../../assets/icons/UserIcon";
 import Image from "../ui/Image"
 import log from "../../assets/images/header_logo.png"
 import './header.css'
-import SignIn from "../AuthComponent/SignIn";
+// import SignIn from "../AuthComponent/SignIn";
+import AuthComponent from "../AuthComponent";
 
 const Header = () => (
 	<header className='header'>
@@ -36,7 +37,7 @@ const Header = () => (
 		</nav>
 		<aside className='header__controls-section'>
 			<span className='header__control'>
-				<PopupButton popupElement={<SignIn />}><UserIcon /></PopupButton>
+				<PopupButton popupElement={<AuthComponent />}><UserIcon /></PopupButton>
 			</span>
 			<span className='header__control'>
 				<a href="#" >

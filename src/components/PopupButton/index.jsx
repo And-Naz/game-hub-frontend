@@ -4,10 +4,10 @@ import "./style.css"
 import SignIn from "../AuthComponent/SignIn";
 const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 	const [showPopup, setShowPopup] = useState(false)
-	const onClickBtn = useCallback(() => { setShowPopup(prev => !prev) }, [])
-	const onBlurBtn = useCallback(() => { /* setShowPopup(false) */ }, [])
+	const onOpen = useCallback(() => { setShowPopup(true) }, [])
+	const onClose = useCallback(() => { setShowPopup(false) }, [])
 	return (
-		<button ref={ref} className='popup-btn' onClick={onClickBtn} onBlur={onBlurBtn}>
+		<button ref={ref} className='popup-btn' onClick={onOpen}>
 			{
 				children && (
 					<span>
@@ -19,6 +19,7 @@ const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 			{
 				showPopup &&
 				<div className="popup-btn__popup-element">
+					<button className="close-icon" onClick={onClose}>X</button>
 					{popupElement}
 				</div>
 			}
