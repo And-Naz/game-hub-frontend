@@ -5,7 +5,9 @@ import SignUp from "./SignUp";
 const AuthComponent = forwardRef(function (props, ref) {
 	const [isSignIn, setIsSignUp] = useState(true)
 	const toggleForm = useCallback((e) => {
-		setIsSignUp(prev => !prev)
+		setTimeout(()=>{
+			setIsSignUp(prev => !prev)
+		},0)
 	}, [])
 	return (
 		isSignIn

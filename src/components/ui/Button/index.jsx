@@ -3,7 +3,7 @@ import './button.css'
 
 const SIZES = ['btn-large', 'btn-medium', 'btn-small'];
 
-function Button({ children, /* onClick, */buttonSize, /* type, */ ...otherProps }) {
+function Button({ children, buttonSize = 'btn-medium', ...otherProps }) {
 
 	const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
 
@@ -11,7 +11,7 @@ function Button({ children, /* onClick, */buttonSize, /* type, */ ...otherProps 
 		// <button className={`btn ${checkButtonSize}`} type={type} onClick={onClick}>
 		// 	{children}
 		// </button>
-		<button className={`btn ${checkButtonSize}`} {...otherProps}>
+		<button className={["btn", checkButtonSize].join(" ")} {...otherProps}>
 			{children}
 		</button>
 	);
