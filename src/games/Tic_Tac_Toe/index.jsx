@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Board from "./board";
 import Winner from "./winner";
+import Results from "./results";
 import './style.css'
-import YouWin from "./youwin";
+
 
 function TicTacToe() {
     const [history, setHistory] = useState([Array(9).fill(null)])
@@ -23,21 +24,6 @@ function TicTacToe() {
         setXIsNext(!xIsNext);
     };
 
-    // const jumpTo = (step) => {
-    //     setStepNumber(step);
-    //     setXIsNext(step % 2 === 0);
-    // };
-    //
-    // const renderMoves = () =>
-    //     history.map((_step, move) => {
-    //         const destination = move ? `Go to move #${move}` : `Go to Start`;
-    //         return (
-    //             <li key={move}>
-    //                 <button onClick={() => jumpTo(move)}>{destination}</button>
-    //             </li>
-    //         );
-    //     });
-
     const refreshPage = () => {
         window.location.reload(false);
     }
@@ -49,7 +35,11 @@ function TicTacToe() {
             <Board squares={history[stepNumber]} onClick={handleClick} />
             <div className='game_info__wrapper'>
                 <button onClick={refreshPage}>Restart</button>
-                <h3>{winner ? <YouWin winner={winner} refreshPage={refreshPage} /> : 'Next Player: ' + X0}</h3>
+                <h3>{(winner && winner !== 'draw') ?
+                        <Results refreshPage={refreshPage}>Winner -- {winner}</Results>:
+                    (winner && winner === 'draw') ?
+                        <Results refreshPage={refreshPage}>DRAW</Results> :
+                        'Next Player: ' + X0}</h3>
             </div>
         </>
     );

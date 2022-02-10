@@ -6,13 +6,6 @@
 .pnp.js
 .idea
 
-/src/api
-/src/assets
-/src/components
-/src/constants
-/src/helpers
-/src/hooks
-/src/pages
 
 # testing
 /coverage
