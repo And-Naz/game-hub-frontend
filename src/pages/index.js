@@ -12,6 +12,10 @@ const pages = [
 		component: <Home />,
 	},
 	{
+		path: "/home",
+		component: <Home />,
+	},
+	{
 		path: "/games",
 		component: <Games />,
 	},

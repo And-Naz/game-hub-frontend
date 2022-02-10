@@ -2,7 +2,6 @@
 	background: transparent;
 	border: none;
 	position: relative;
-	padding: 5px;
 }
 
 .popup-btn:hover {
@@ -21,7 +20,7 @@
 	color: white;
 	position: absolute;
 	top: 35%;
-	right: -5px;
+	right: -10px;
 }
 
 .popup-btn__popup-element {

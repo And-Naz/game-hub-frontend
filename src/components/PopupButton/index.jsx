@@ -7,7 +7,7 @@ const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 	const onOpen = useCallback(() => { setShowPopup(true) }, [])
 	const onClose = useCallback(() => { setShowPopup(false) }, [])
 	return (
-		<button ref={ref} className='popup-btn' onClick={onOpen}>
+		<span ref={ref} className='popup-btn' onClick={onOpen}>
 			{
 				children && (
 					<span>
@@ -23,7 +23,7 @@ const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 					{popupElement}
 				</div>
 			}
-		</button>
+		</span>
 	);
 })
 

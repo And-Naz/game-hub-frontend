@@ -4,7 +4,6 @@ import UserIcon from "../../assets/icons/UserIcon";
 import Image from "../ui/Image"
 import log from "../../assets/images/header_logo.png"
 import './header.css'
-// import SignIn from "../AuthComponent/SignIn";
 import AuthComponent from "../AuthComponent";
 
 const Header = () => (
