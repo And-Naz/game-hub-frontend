@@ -1,0 +1,42 @@
+.popup-btn {
+	background: transparent;
+	border: none;
+	position: relative;
+}
+
+.popup-btn:hover {
+	cursor: pointer;
+}
+
+.popup-btn__caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	vertical-align: middle;
+	border-top: 4px dashed;
+	border-width: 3px;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	color: white;
+	position: absolute;
+	top: 35%;
+	right: -10px;
+}
+
+.popup-btn__popup-element {
+	position: absolute;
+	left: -115px;
+	top: 65px;
+}
+.close-icon {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding: 0.25rem 0.5rem;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	background: transparent;
+}
+
+

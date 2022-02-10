@@ -1,0 +1,64 @@
+
+.game_header {
+    margin: 2rem;
+    font-size: 35px;
+    text-align: center;
+}
+
+.board {
+    border: 1rem solid white;
+    background: white;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.squares {
+    background: #080325;
+    border: none;
+    font-size: 5rem;
+    /* font-weight: 800; */
+    cursor: pointer;
+    outline: none;
+}
+
+.X {
+    color: red;
+}
+
+.O {
+    color: white;
+}
+
+
+.game_info__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game_info__wrapper h3 {
+    padding: 1rem;
+}
+
+.game_info__wrapper button {
+    font-size: 16px;
+    background: white;
+    color: #080325;
+    border: 1px solid white;
+    border-radius: 20%;
+    cursor: pointer;
+    padding: 0.7rem;
+    margin: 0.5rem 1rem;
+}
+
+.game_info__wrapper button:hover {
+    background-color: #080325;
+    color: white;
+    transition: 7ms;
+}
+
+.winner {
+
+}
