@@ -10,12 +10,12 @@ class Request {
             case Request.Statuses.Ready:
                 Object.defineProperty(this, "status", { configurable: true, writable: false, enumerable: true, value: Request.Statuses.Ready })
                 Object.defineProperty(this, "isReady", { configurable: true, writable: false, enumerable: true, value: true })
-                Object.defineProperty(this, "isPending", { configurable: true, writable: false, enumerable: true, value: false })
+                Object.defineProperty(this, "isLoading", { configurable: true, writable: false, enumerable: true, value: false })
                 break;
             case Request.Statuses.Loading:
                 Object.defineProperty(this, "status", { configurable: true, writable: false, enumerable: true, value: Request.Statuses.Loading })
                 Object.defineProperty(this, "isReady", { configurable: true, writable: false, enumerable: true, value: false })
-                Object.defineProperty(this, "isPending", { configurable: true, writable: false, enumerable: true, value: true })
+                Object.defineProperty(this, "isLoading", { configurable: true, writable: false, enumerable: true, value: true })
                 break;
             default:
                 break;
@@ -40,7 +40,7 @@ class Request {
     }
     async register(params) {
         this.#setStatus(Request.Statuses.Loading)
-        const response = await FetchApi(this.url + "auth/login", "POST", params)
+        const response = await FetchApi(this.url + "auth/register", "POST", params)
         this.#setStatus(Request.Statuses.Ready)
         return response
     }
