@@ -1,6 +1,7 @@
 import Card from "./card";
 import male from '../../assets/images/male_avatar.png'
 import female from '../../assets/images/female_avatar.png'
+import UserPage from "../../components/UserPage";
 
 function About() {
 	return (
@@ -35,6 +36,10 @@ function About() {
 					Lorem Ipsum is simply dummy text of the printing.
 				</Card>
 			</div>
+
+			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<UserPage />
+			<br/><br/><br/><br/><br/><br/><br/><br/>
 		</section>
 	);
 }

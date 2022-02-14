@@ -24,21 +24,23 @@ function TicTacToe() {
         setXIsNext(!xIsNext);
     };
 
-    const refreshPage = () => {
-        window.location.reload(false);
-    }
 
+    const reset = () => {
+        setHistory([Array(9).fill(null)])
+        setStepNumber(0)
+        setXIsNext(true)
+    }
 
     return (
         <>
             <h1 className='game_header'>Tic - Tac - Toe</h1>
             <Board squares={history[stepNumber]} onClick={handleClick} />
             <div className='game_info__wrapper'>
-                <button onClick={refreshPage}>Restart</button>
+                <button onClick={reset}>Restart</button>
                 <h3>{(winner && winner !== 'draw') ?
-                        <Results refreshPage={refreshPage}>Winner -- {winner}</Results>:
+                        <Results refreshPage={reset}>Winner -- {winner}</Results>:
                     (winner && winner === 'draw') ?
-                        <Results refreshPage={refreshPage}>DRAW</Results> :
+                        <Results refreshPage={reset}>DRAW</Results> :
                         'Next Player: ' + X0}</h3>
             </div>
         </>
