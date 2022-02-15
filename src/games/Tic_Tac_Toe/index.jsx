@@ -38,9 +38,9 @@ function TicTacToe() {
             <div className='game_info__wrapper'>
                 <button onClick={reset}>Restart</button>
                 <h3>{(winner && winner !== 'draw') ?
-                        <Results refreshPage={reset}>Winner -- {winner}</Results>:
+                        <Results reset={reset}>Winner -- {winner}</Results>:
                     (winner && winner === 'draw') ?
-                        <Results refreshPage={reset}>DRAW</Results> :
+                        <Results reset={reset}>DRAW</Results> :
                         'Next Player: ' + X0}</h3>
             </div>
         </>
