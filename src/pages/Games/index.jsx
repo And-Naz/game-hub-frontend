@@ -1,10 +1,11 @@
-import TicTacToe from "../../games/Tic_Tac_Toe";
+
+import Hangman from "../../games/Hangman";
 
 function Games(props) {
 	return (
 		<section>
-			{/*Games Page Component*/}
-			<TicTacToe />
+			Games Page Component
+			<Hangman />
 		</section>
 	);
 }
