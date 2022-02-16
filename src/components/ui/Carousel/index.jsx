@@ -5,7 +5,7 @@ import style from "./style.css"
 
 const initialDefault = {
     dots:false, 
-    adaptiveHeight:false,
+    adaptiveHeight:true,
     arrows:false,
     slidesToShow:getCount()
 }
@@ -21,7 +21,7 @@ function getCount () {
 const Carousel = ({info = [],content}) =>{
     const [cardInfo , setCardInfo] = useState(info)
     const [settings, setSettings] = useState(initialDefault)
-
+    console.log(info,'info')
     useEffect(() => {
         window.addEventListener('resize', cardsCount)
         return ()=>{

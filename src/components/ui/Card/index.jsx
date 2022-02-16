@@ -11,9 +11,11 @@ const Card = forwardRef(({data,content,...otherProps},ref) => {
   const {url,name,rating,price,sale,saleFrom} = data
   return (
       <div className="card" ref={ref} {...otherProps}>
-          <div className="card__shape">
-              <img className="card__img" src={url} alt={`${name}_img`}/>  
-          </div>
+     
+            <div className="card__shape">
+                <img className="card__img" src={url} alt={`${name}_img`}/>  
+            </div>
+         
           {   
               content === "Header"?
               <HeaderContent name={name} />
@@ -34,6 +36,7 @@ const Card = forwardRef(({data,content,...otherProps},ref) => {
               <NewsContent rating={rating} />
               :null
           }
+        
       </div>
   );
 })

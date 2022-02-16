@@ -1,0 +1,10 @@
+:root {
+    --main-color: hotpink;
+    --second-bg-color: #222;
+  }
+.game-play{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px 0px;
+    contain: content;
+}

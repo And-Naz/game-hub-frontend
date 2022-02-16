@@ -4,10 +4,15 @@ const Rating = ({price,sale,saleFrom}) =>{
     return (
         <div className="price">
             <span className="woocommerce-Price-amount amount">
-                <span className="woocommerce-Price-currencySymbol">
-                    $
-                </span>
-                {price}
+            {price !== '0'?
+                <>
+                    <span className="woocommerce-Price-currencySymbol">
+                        $
+                    </span>
+                    {price}
+                </>
+            :
+            'Free'}
             </span> 
             {sale?
                 <Sale saleFrom ={saleFrom} />

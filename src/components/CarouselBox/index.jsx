@@ -3,11 +3,11 @@ import Carousel from "../ui/Carousel"
 import YouplayBox from "../ui/YouplayBox"
 import style from "./style.css"
 
-const Games = ({info,content}) =>{
+const Games = ({info,content,title}) =>{
 
     return (
         <div className="carousel-box" id={content}>
-            {content !== "Header"?<YouplayBox name={content} href={true}/>:null}
+            {title ?<YouplayBox name={content} href={true}/>:null}
             <Carousel info = {info} content={content}/>
         </div>
     )
