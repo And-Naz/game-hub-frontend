@@ -1,12 +1,41 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-function PopUp() {
+function PopUp({correctLetters, wrongLetters, selectedWord, setPlay, playAgain}) {
+    let finalMessage = '';
+    let finalMessageRevealWord = ''
+    let play = true;
+
+    const checkWin = (correct, wrong, word) => {
+        let status = 'win';
+
+        word.split('').forEach(letter => {
+            if(!correct.includes(letter)){
+                status = '';
+            }
+        });
+        if(wrong.length === 6) {
+            status = 'lose'
+        }
+        return status;
+    }
+
+    useEffect(() => setPlay(play));
+
+    if(checkWin (correctLetters, wrongLetters, selectedWord) === 'win'){
+        finalMessage = 'Congratulations! You Win!!!';
+        play = false;
+    } else if(checkWin (correctLetters, wrongLetters, selectedWord) === 'lose'){
+        finalMessage = 'Unfortunately You lost.';
+        finalMessageRevealWord = `The word was:  ${selectedWord}`;
+        play = false;
+    }
+
     return (
-        <div className='popup-container'>
+        <div className='popup-container' style={finalMessage !== '' ? {display: 'flex'} : {}}>
             <div className='popup'>
-                <h2 className='final-message'></h2>
-                <h3 className='final-message-reveal-word'></h3>
-                <button className='play-button'>Play Again</button>
+                <h2>{finalMessage}</h2>
+                <h3>{finalMessageRevealWord}</h3>
+                <button onClick={playAgain}>Play Again</button>
             </div>
         </div>
     );

@@ -1,11 +1,8 @@
 
-import Hangman from "../../games/Hangman";
-
-function Games(props) {
+function Games() {
 	return (
 		<section>
 			Games Page Component
-			<Hangman />
 		</section>
 	);
 }
