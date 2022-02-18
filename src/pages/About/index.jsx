@@ -37,7 +37,7 @@ function About() {
 				</Card>
 			</div>
 
-			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/>
 			<UserPage />
 			<br/><br/><br/><br/><br/><br/><br/><br/>
 		</section>
