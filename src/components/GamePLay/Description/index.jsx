@@ -1,7 +1,6 @@
 import {useState,useCallback} from 'react';
 import "./style.css"
 const Description = ({info}) => {
-    console.log(info)
     const  [wrapper,setWrapper] = useState(true)
     const handleWrapperChange = useCallback(()=>{
         console.log()

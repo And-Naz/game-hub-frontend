@@ -7,10 +7,11 @@
     justify-content: space-between;
     align-items: center;
     max-height: 180px;
+    padding: 0px 15px;
 }
 .youplay-box h2{
     font-size: 50px;
-    margin-top: 6rem;
+    margin-top: 3rem;
     margin-bottom: 4rem;
     font-family: lato,sans-serif;
     color: #fff;

@@ -43,6 +43,7 @@
     border: 2px solid #fffdfd;
     background: #ffffff00;
     cursor: pointer;
+    width: 100%;
 }
 
 .wrapper-box__item>div {

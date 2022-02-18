@@ -1,6 +1,5 @@
 import style from "./style.module.css"
 const HexagonRating = ({rating}) => {
-    console.log(rating,'rating')
     return (
         <div className={style.hexagonRating}>
             <div className={style.button}>

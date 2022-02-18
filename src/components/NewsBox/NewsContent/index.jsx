@@ -1,5 +1,7 @@
 import React from 'react';
 import Tags from '../../ui/Tags';
+import Button from "../../ui/Button";
+
 import './style.css'
 
 const NewsContent = ({data}) => {
@@ -23,7 +25,7 @@ const NewsContent = ({data}) => {
                 <div className='news-content__entry-content description'>
                     <p>{description}</p>
                 </div>
-                <button>Read More</button>
+                <Button children='Learn More' type='button' buttonSize='btn-medium'/>
             </div>
         </div>
     );

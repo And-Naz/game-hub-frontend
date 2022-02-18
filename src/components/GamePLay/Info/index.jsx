@@ -1,4 +1,4 @@
-import React from 'react';
+import {Link} from "react-router-dom";
 import "./style.css"
 
 const Info = ({info}) => {
@@ -18,7 +18,7 @@ const Info = ({info}) => {
                     <div className="info__rl-1">Genres</div>
                     <div className="info__rl-2" >
                     {info.Genres.map(item=>
-                        <a key={`${item.name}${item.id}`} href={item.url} rel="tag">{item.name},</a>
+                        <Link key={`${item.name}${item.id}`} to={`/games/${item.url}`} rel="tag">{item.name},</Link>
                     )}
                     </div>
                 </div>
@@ -26,26 +26,26 @@ const Info = ({info}) => {
                     <div className="info__rl-1">Features</div>
                     <div className="info__rl-2">
                         {info.Features.map(item=>
-                            <a  key={`${item.name}${item.id}`} href={item.url} rel="tag">{item.name},</a>
+                            <Link  key={`${item.name}${item.id}`} to={`/games/${item.url}`} rel="tag">{item.name},</Link>
                         )}
                     </div>
                 </div>
                 <div className="info__r-2">
                     <div className="info__rl-1">Year</div>
                     <div className="info__rl-2">
-                        <a href={info.year.url} rel="tag">{info.year.in}</a>
+                        <Link to={`/games/${info.year.url}`} rel="tag">{info.year.name}</Link>
                     </div>
                 </div>
                 <div className="info__r-1">
                     <div className="info__rl-1">Country</div>
                     <div className="info__rl-2">
-                        <a href={info.country.url} rel="tag">{info.country.in}</a>
+                        <Link to={`/games/${info.country.url}`} rel="tag">{info.country.name}</Link>
                     </div>
                 </div>
                 <div className="info__r-2">
                     <div className="info__rl-1">Creator</div>
                     <div className="info__rl-2">
-                        <a href={info.created.url} rel="tag">{info.created.by}</a>
+                        <Link to={`/games/${info.created.url}`} rel="tag">{info.created.name}</Link>
                     </div>
                 </div>
                 <div className="info__r-1">

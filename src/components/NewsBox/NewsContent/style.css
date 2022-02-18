@@ -1,5 +1,6 @@
 .news__content.news-content {
     text-align: left;
+    margin: 0;
 }
 .news-content__entry-header {
     display: flex;

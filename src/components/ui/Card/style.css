@@ -1,3 +1,7 @@
+.card__link{
+    color: white;
+    text-decoration: none;
+}
 .card{
     position: relative;
     height: max-content;

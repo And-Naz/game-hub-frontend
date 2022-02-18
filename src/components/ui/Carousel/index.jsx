@@ -21,7 +21,6 @@ function getCount () {
 const Carousel = ({info = [],content}) =>{
     const [cardInfo , setCardInfo] = useState(info)
     const [settings, setSettings] = useState(initialDefault)
-    console.log(info,'info')
     useEffect(() => {
         window.addEventListener('resize', cardsCount)
         return ()=>{
@@ -39,9 +38,10 @@ const Carousel = ({info = [],content}) =>{
         <div className="slider " >
             <Slider {...settings} >
             {
-                cardInfo.map(el =>
-                    <Card key={el.id} data={el} content={content}/>
-                )
+
+                    cardInfo.map(el =>
+                        <Card key={el.id} data={el} content={content}/>
+                    )
             }
             </Slider>
         </div>

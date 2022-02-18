@@ -1,31 +1,52 @@
-import {useState,lazy,Suspense} from 'react';
+import {useState,lazy,Suspense,useEffect,useCallback} from 'react';
+import {useNavigate} from "react-router-dom";
 import "./style.css"
 
 const Info = lazy(() => import('./Info'));
 const Description = lazy(() => import('./Description'));
 const Tray = lazy(() => import('./Tray'));
-const SimilarGames = lazy(() => import('./SimilarGames'));
+const SimilarGames = lazy(() => import('../ui/SimilarGames'));
 const FullScreen = lazy(() => import('./FullScreen'));
 
+const GamePlay = ({info={}, content, similarGames=[],params}) => {
 
-const GamePlay = ({info=[], content}) => {
-    const [isFullscreen,setIsFullscreen] = useState(false)
+    const [isFullscreen,setIsFullscreen] = useState('small')
+    const navigate = useNavigate() 
+    const onClose = useCallback(() => {
+        navigate('./')
+    },[])
+    useEffect(()=>{
+        if(params.screen){
+            setIsFullscreen(params.screen)
+        }else{
+            setIsFullscreen('small')
+        }
+    },[params])
     return (
-        <div className='game-play'>
-            {
-                isFullscreen?
-                    <Suspense  fallback={<div>Loading...</div>}>
-                        <FullScreen info={info[0]} setIsFullscreen={setIsFullscreen}/>
-                    </Suspense>
-                :
-                <Suspense  fallback={<div>Loading...</div>}>
-                    <Info info={info[0]}/>
-                    <Description info={info[0]}/>
-                    <Tray setIsFullscreen={setIsFullscreen} info={info[0]}/>
-                    <SimilarGames  info={info} content={content}/>
-                </Suspense>
-            }
-        </div>
+        <>
+
+            <div className='game-play'>
+                {
+                    isFullscreen === 'fullscreen'?
+                        <Suspense  fallback={<div>Loading...</div>}>
+                            <div className='game-play__full-screen-box'>
+                                <FullScreen info={info} goBack={onClose}/>
+                            </div>
+                        </Suspense>
+                    :
+                        <Suspense  fallback={<div>Loading...</div>}>
+                            <div className='game-play__screen-box'>
+                                <Info info={info}/>
+                                <Description info={info}/>
+                                <Tray info={info} goBack={onClose}/>
+                                <SimilarGames  info={similarGames} content={content}/>
+                            </div>
+                        </Suspense>
+                    }
+            </div>
+            
+        </>
+
     );
 }
 
