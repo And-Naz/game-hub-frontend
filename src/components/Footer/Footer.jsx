@@ -1,12 +1,11 @@
 import React from "react";
-import './Footer.css'
-// import {TestDiv} from "./test";
-import Responsive from "./PartnersSlider/PartnersSlider";
 import Partners from "./PartnersSlider/PartnersSlider";
+import Social from "../Social";
+import './Footer.css';
 
 const Footer = () => {
 
-    const cardClasses = ["facebookCard", "twitterCard", "googleCard", "youtubeCard"]
+    const open = (path) => window.open(path)
 
     return (
         <>
@@ -17,23 +16,22 @@ const Footer = () => {
                 <div className="footerWrapper">
                     <section className="feedback-section">
 
-                        {/*<span className="footer-icon"><i ref={"*"}/></span>*/}
-                        <h2>Connect socially with "AVAHas Games"</h2>
+                        <p>Connect socially with "AVAHas Games"</p>
                         <div className="footerSocialCardsContainer">
-                            <div className={cardClasses[0]}>
-                                <i>F icon</i>
+                            <div className="footerSocialCards" onClick={() => open("https://www.facebook.com/")}>
+                                <img src={require("./Images/icons8-facebook-150.png")} alt='image does not exist'/>
                                 <p>Link on Facebook</p>
                             </div>
-                            <div className={cardClasses[1]}>
-                                <i>T icon</i>
+                            <div className="footerSocialCards" onClick={() => open("https://www.twitter.com/")}>
+                                <img src={require("./Images/icons8-twitter-150.png")} alt='image does not exist'/>
                                 <p>Follow on Twitter</p>
                             </div>
-                            <div className={cardClasses[2]}>
-                                <i>G icon</i>
+                            <div className="footerSocialCards" onClick={() => open("https://www.mail.google.com/")}>
+                                <img src={require("./Images/icons8-google-96.png")} alt='image does not exist'/>
                                 <p>Follow on Google+</p>
                             </div>
-                            <div className={cardClasses[3]}>
-                                <i>Y icon</i>
+                            <div className="footerSocialCards" onClick={() => open("https://www.youtube.com/")}>
+                                <img src={require("./Images/icons8-youtube-squared-150.png")} alt='image does not exist'/>
                                 <p>Watch on Youtube</p>
                             </div>
                         </div>

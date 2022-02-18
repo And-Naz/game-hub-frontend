@@ -6,6 +6,7 @@ import "./PartnerSlider.css"
 
 const settings = {
     dots: true,
+    color: "#fff",
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -42,41 +43,45 @@ const settings = {
 export default class Partners extends Component {
     render() {
         return (
-            <div className='images-container'>
+            <div className='images-container-wrapper'>
                 <h2> PARTNERS </h2>
-                <Slider {...settings}>
-                    <div className="partner-image">
-                        <img alt='someImage'
-                            src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-1-500x333.png"
-                        />
-                    </div>
-                    <div className="partner-image">
-                        <img alt='someImage'
-                            src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-2-500x333.png"
-                        />
-                    </div>
-                    <div className="partner-image">
-                        <img alt='someImage'
-                            src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-3-500x333.png"
-                        />
-                    </div>
+                <div className="images-container">
 
-                    <div className="partner-image">
-                        <img alt='someImage'
-                            src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-4-500x333.png"
-                        />
-                    </div>
-                    <div className="partner-image">
-                        <img alt='someImage'
-                            src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-5-500x333.png"
-                        />
-                    </div>
-                    <div className="partner-image">
-                        <h2>Vacant position</h2>
-                        <h2>Maybe you?</h2>
-                    </div>
+                    <Slider {...settings} >
+                        <div className="partner-image">
+                            <img alt='someImage'
+                                 src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-1.png"
+                            />
+                        </div>
+                        <div className="partner-image">
+                            <img alt='someImage'
+                                 src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-2.png"
+                            />
+                        </div>
+                        <div className="partner-image">
+                            <img alt='someImage'
+                                 src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-3.png"
+                            />
+                        </div>
 
-                </Slider>
+                        <div className="partner-image">
+                            <img alt='someImage'
+                                 src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-4.png"
+                            />
+                        </div>
+                        <div className="partner-image">
+                            <img alt='someImage'
+                                 src="https://wp.nkdev.info/youplay/wp-content/uploads/2015/10/partner-logo-5.png"
+                            />
+                        </div>
+                        <div className="partner-image">
+                            <p><strong>Vacant position</strong></p>
+                            <p>Maybe you?</p>
+
+                        </div>
+
+                    </Slider>
+                </div>
             </div>
         );
     }
