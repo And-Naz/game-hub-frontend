@@ -1,0 +1,25 @@
+.tags {
+    display: block;
+    margin: 1rem 0;
+    clear: both;
+    font-size: 1.2rem;
+    text-align: left;
+    color: rgba(255,255,255,.5);
+}
+a.tag__link {
+    text-decoration: none;
+    transition: .3s color ease;
+    color: rgba(255,255,255,.5);
+    vertical-align: -0.125em;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+a.tag__link:hover {
+    color: #d92b4c;
+}
+@media (max-width: 630px)
+{
+    .tags{
+        text-align: center;
+    }
+}
