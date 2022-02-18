@@ -1,10 +1,6 @@
 import Image from "../../components/ui/Image";
 import Button from "../../components/ui/Button";
-import api from "../../api"
 import './home.css'
-
-console.log(api);
-console.log(api.getHome());
 
 function Home() {
 	return (

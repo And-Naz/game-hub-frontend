@@ -4,6 +4,7 @@
 	"private": true,
 	"homepage": ".",
 	"dependencies": {
+		"axios": "^0.26.0",
 		"core-js": "^3.21.0",
 		"object-fit-images": "^3.2.4",
 		"react": "^17.0.2",
