@@ -14,7 +14,10 @@ import './style.css'
 
 function UserPage() {
 
-    const [userImg, setUserImg] = useState(user)
+    const [userImg, setUserImg] = useState(user);
+    const [cardPopup, setCardPopup] = useState(false)
+    const [emailPopup, setEmailPopup] = useState(false)
+    const [pswPopup, setPswPopup] = useState(false)
 
     const imageHandler = (e) => {
         const reader = new FileReader();
@@ -25,6 +28,21 @@ function UserPage() {
         }
         reader.readAsDataURL(e.target.files[0])
     }
+
+    const cardHandler = () => {
+        setCardPopup(true)
+    }
+
+    const emailHandler = () => {
+        setEmailPopup(true)
+    }
+
+    const pswHandler = () => {
+        setPswPopup(true)
+    }
+
+
+
 
     return (
         <section className='user_container'>
@@ -40,12 +58,11 @@ function UserPage() {
             </div>
             <div className='user_card'>
                 <h2>Add Card</h2>
-                <PopupButton popupElement={<CreditCard />}>
-                    <div className='icon-btn'>
-                        <BsCreditCard2Back />
-                        <p>Add Card</p>
-                    </div>
-                </PopupButton>
+                <button onClick={cardHandler} className='icon-btn'>
+                    <BsCreditCard2Back />
+                    <p>Add Card</p>
+                </button>
+                <CreditCard trigger={cardPopup} setTrigger={setCardPopup} />
             </div>
             <div className='user_settings'>
                 <h2>Settings</h2>
@@ -55,18 +72,17 @@ function UserPage() {
                         <div className='icon'><RiImageAddFill /></div>
                         <p>Upload an Image</p>
                     </label>
-                    <PopupButton popupElement={<ChangeEmail />}>
-                        <div className='icon-btn'>
+                    <button onClick={emailHandler} className='icon-btn'>
                             <MdAlternateEmail />
                             <p>Change Email</p>
-                        </div>
-                    </PopupButton>
-                    <PopupButton popupElement={<ChangePassword />}>
-                        <div className='icon-btn'>
-                            <RiLockPasswordLine />
-                            <p>Change Password</p>
-                        </div>
-                    </PopupButton>
+                    </button>
+                    <ChangeEmail triggerEmail={emailPopup} setTriggerEmail={setEmailPopup} />
+
+                    <button onClick={pswHandler} className='icon-btn'>
+                        <RiLockPasswordLine />
+                        <p>Change Password</p>
+                    </button>
+                    <ChangePassword triggerPsw={pswPopup} setTriggerPsw={setPswPopup} />
                 </div>
             </div>
         </section>
@@ -74,3 +90,18 @@ function UserPage() {
 }
 
 export default UserPage;
+
+
+//
+// <PopupButton popupElement={<ChangeEmail />}>
+//     <div className='icon-btn'>
+//         <MdAlternateEmail />
+//         <p>Change Email</p>
+//     </div>
+// </PopupButton>
+// <PopupButton popupElement={<ChangePassword />}>
+//     <div className='icon-btn'>
+//         <RiLockPasswordLine />
+//         <p>Change Password</p>
+//     </div>
+// </PopupButton>

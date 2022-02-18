@@ -1,8 +1,9 @@
 
-function Games() {
+function Games(props) {
 	return (
 		<section>
 			Games Page Component
+
 		</section>
 	);
 }

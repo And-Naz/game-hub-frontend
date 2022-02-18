@@ -3,7 +3,7 @@ import Cards from "react-credit-cards";
 import 'react-credit-cards/es/styles-compiled.css'
 import Button from "../ui/button";
 
-function CreditCard() {
+function CreditCard(props) {
 
     const [cvc, setCvc] = useState('')
     const [expiry, setExpiry] = useState('')
@@ -32,53 +32,57 @@ function CreditCard() {
     }
 
 
-    return (
-        <>
-            <div className='card_container'>
-                <Cards
-                number={number}
-                name={name}
-                expiry={expiry}
-                cvc={cvc}
-                focused={focus}
-                />
-                <form>
-                    <h3>Please input your data</h3>
-                    <input type="tel"
-                       name='number'
-                       placeholder='Card Number'
-                       value={number}
-                       onChange={handleInputNumber}
-                       onFocus={handleInputFocus}
+    return (props.trigger) ? (
+        <section className='credit_card_container'>
+            <div className='credit_card'>
+                <div className='card_container'>
+                    <Cards
+                        number={number}
+                        name={name}
+                        expiry={expiry}
+                        cvc={cvc}
+                        focused={focus}
                     />
-                    <input type="text"
-                       name='name'
-                       placeholder='Name'
-                       value={name}
-                       onChange={handleInputName}
-                       onFocus={handleInputFocus}
-                    />
-                    <input type="text"
-                       name='expiry'
-                       placeholder='MM/YY Expiry'
-                       value={expiry}
-                       onChange={handleInputExpiry}
-                       onFocus={handleInputFocus}
-                    />
-                    <input type="tel"
-                       name='cvc'
-                       placeholder='CVC'
-                       value={cvc}
-                       onChange={handleInputCvc}
-                       onFocus={handleInputFocus}
-                    />
-                </form>
+                    <form>
+                        <h3>Please input your data</h3>
+                        <input type="tel"
+                               name='number'
+                               placeholder='Card Number'
+                               value={number}
+                               onChange={handleInputNumber}
+                               onFocus={handleInputFocus}
+                        />
+                        <input type="text"
+                               name='name'
+                               placeholder='Name'
+                               value={name}
+                               onChange={handleInputName}
+                               onFocus={handleInputFocus}
+                        />
+                        <input type="text"
+                               name='expiry'
+                               placeholder='MM/YY Expiry'
+                               value={expiry}
+                               onChange={handleInputExpiry}
+                               onFocus={handleInputFocus}
+                        />
+                        <input type="tel"
+                               name='cvc'
+                               placeholder='CVC'
+                               value={cvc}
+                               onChange={handleInputCvc}
+                               onFocus={handleInputFocus}
+                        />
+                    </form>
+                </div>
+                <div className='add_card_section'>
+                    <Button type='submit' buttonSize='btn-small'>Add Card</Button>
+                    <Button onClick={() => props.setTrigger(false)} type='button' buttonSize='btn-small'>Close</Button>
+                    {props.children}
+                </div>
             </div>
-            <div className='add_card_section'>
-                <Button type='submit' buttonSize='btn-small'>Add Card</Button>
-            </div>
-        </>
-    );
+        </section>
+    ) : '';
 }
 
 export default CreditCard;
