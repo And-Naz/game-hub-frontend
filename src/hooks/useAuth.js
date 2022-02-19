@@ -11,10 +11,10 @@ const useAuth = () => {
 	const [ready, setReady] = useState(true)
 	const dispatch = useDispatch()
 
-	const registration = useCallback(async (email, password) => {
+	const registration = useCallback(async (form) => {
 		setReady(false)
 		try {
-			const res = await AuthService.registration(email, password)
+			const res = await AuthService.registration(form)
 			if (res) {
 				localStorage.setItem(storageName, res.accessToken)
 				dispatch(setAuth(true))
