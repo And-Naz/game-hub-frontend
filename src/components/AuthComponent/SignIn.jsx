@@ -1,34 +1,43 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Button from "../ui/Button";
+import useAuth from '../../hooks/useAuth';
 import './style.css'
-
-const passwordRegExt = /^\w{6,8}$/g
 
 function SignIn({ toggleForm }) {
 
-	const [form, setForm] = useState({userName: '', password: ''})
-	// const onChangeUserName = e => setForm(prev => ({...prev, userName: e.target.value}))
-	const onChangeEmail = e => setForm(prev => ({...prev, email: e.target.value}))
-	const onChangePassword = e => setForm(prev => ({...prev, password: e.target.value}))
-
+	const [form, setForm] = useState({ userNameOrEmail: '', password: '' })
+	const onChangeUserNameOrEmail = e => setForm(prev => ({ ...prev, userNameOrEmail: e.target.value }))
+	const onChangePassword = e => setForm(prev => ({ ...prev, password: e.target.value }))
+	const { login } = useAuth()
 	const onSubmitForm = (event) => {
 		event.preventDefault()
+		login(form.userNameOrEmail, form.password)
 	}
 
 	return (
 		<div className='navbar-login-form'>
 			<form action="#" method='post' onSubmit={onSubmitForm}>
-			<label htmlFor='email'>Email:</label>
+				<label htmlFor='userNameOrEmail'>Username or Email:</label>
 				<div>
-					<input className="login-form-inp" type="email" id='email' name="email" value={form.email} onChange={onChangeEmail} />
+					<input
+						className="login-form-inp"
+						type="text"
+						id='userNameOrEmail'
+						name="userNameOrEmail"
+						value={form.userNameOrEmail}
+						onChange={onChangeUserNameOrEmail}
+					/>
 				</div>
-				{/* <label htmlFor='userName'>Username:</label>
-				<div>
-					<input className="login-form-inp" type="text" id='userName' name="userName" value={form.userName} onChange={onChangeUserName} />
-				</div> */}
 				<label htmlFor='password'>Password:</label>
 				<div>
-					<input className="login-form-inp" type="password" id='password' name="password" value={form.password} onChange={onChangePassword} />
+					<input
+						className="login-form-inp"
+						type="password"
+						id='password'
+						name="password"
+						value={form.password}
+						onChange={onChangePassword}
+					/>
 				</div>
 				{/* <div className='control-section'>
 					<label>
