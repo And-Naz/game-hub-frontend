@@ -121,3 +121,8 @@
     height: 1em;
     color: white;
 }
+
+.search_btn {
+    background: none;
+    border: none;
+}
