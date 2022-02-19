@@ -38,6 +38,10 @@ span.news-content__date-box {
 .news-content__link:hover {
     color: #d92b4c;
 }
+.news-content__entry-content p{
+    max-height: 40px;
+    overflow: hidden;
+}
 
 @media (max-width: 995px){
     .news-content__entry-header{

@@ -24,6 +24,7 @@ const NewsContent = ({data}) => {
                 <Tags tags={tags}/>
                 <div className='news-content__entry-content description'>
                     <p>{description}</p>
+                    <span>[...]</span>
                 </div>
                 <Button children='Learn More' type='button' buttonSize='btn-medium'/>
             </div>
