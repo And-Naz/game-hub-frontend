@@ -3,13 +3,9 @@ import Button from "../../components/ui/Button";
 import api from "../../api"
 import CarouselBox from '../../components/CarouselBox'
 import NewsBox from '../../components/NewsBox'
-
 import './home.css'
 
-// console.log(api);
-// console.log(api.getHome());
-
-function Home({cardsInfo}) {
+function Home({ cardsInfo }) {
 	return (
 		<>
 			<section className="page">
@@ -26,17 +22,17 @@ function Home({cardsInfo}) {
 					<Button children='Learn More' type='button' buttonSize='btn-large' />
 				</div>
 				<div className="page__carousel">
-					<CarouselBox info={cardsInfo} content={"Header"}  title={false}/>
+					<CarouselBox info={cardsInfo} content={"Header"} title={false} />
 				</div>
 			</section>
-			<section className="games">	
-				<CarouselBox info={cardsInfo} content={"Games"}  title={true}/>
+			<section className="games">
+				<CarouselBox info={cardsInfo} content={"Games"} title={true} />
 			</section>
-			<section className="discounts">	
-				<CarouselBox info={cardsInfo} content={"Discounts"}  title={true}/>
+			<section className="discounts">
+				<CarouselBox info={cardsInfo} content={"Discounts"} title={true} />
 			</section>
-			<section className="latest-news">	
-				<NewsBox info={cardsInfo} content={"Latest News"} title={true}/>
+			<section className="latest-news">
+				<NewsBox info={cardsInfo} content={"Latest News"} title={true} />
 			</section>
 		</>
 

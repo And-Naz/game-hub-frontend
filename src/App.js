@@ -1,9 +1,14 @@
-import { Suspense } from "react"
+import { Suspense, useEffect } from "react"
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import pages from "./pages"
+import useAuth from "./hooks/useAuth";
 import './assets/css/App.css';
 function App() {
+	const { checkAuth } = useAuth()
+	useEffect(() => {
+		checkAuth()
+	}, [])
 	return (
 		<>
 			<Header />
@@ -21,7 +26,6 @@ function App() {
 				</Suspense>
 			</main>
 		</>
-
 	);
 }
 

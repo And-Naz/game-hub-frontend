@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import { useState, } from 'react';
 import Button from "../ui/Button";
-import api from "../../api"
+import useAuth from '../../hooks/useAuth';
 import './style.css'
 
 const emailRegExt = /^[-\w]+@\w+\.\w+$/g
@@ -8,24 +8,23 @@ const passwordRegExt = /^\w{6,8}$/g
 
 function SignUp({ toggleForm }) {
 
-	const [form, setForm] = useState({userName: '', email: '', password: '', confirmPassword: '', gender: 'male', terms: false})
-	const onChangeUserName = e => setForm(prev => ({...prev, userName: e.target.value}))
-	const onChangeEmail = e => setForm(prev => ({...prev, email: e.target.value}))
-	const onChangePassword = e => setForm(prev => ({...prev, password: e.target.value}))
-	const onChangeConfirmPassword = e => setForm(prev => ({...prev, confirmPassword: e.target.value}))
-	const onChangeGender = e => setForm(prev => ({...prev, gender: e.target.value}))
-	const onChangeTerms = e => setForm(prev => ({...prev, terms: e.target.checked}))
+	const [form, setForm] = useState({ userName: '', email: '', password: '', confirmPassword: '', gender: 'male', terms: false })
+	const onChangeUserName = e => setForm(prev => ({ ...prev, userName: e.target.value }))
+	const onChangeEmail = e => setForm(prev => ({ ...prev, email: e.target.value }))
+	const onChangePassword = e => setForm(prev => ({ ...prev, password: e.target.value }))
+	const onChangeConfirmPassword = e => setForm(prev => ({ ...prev, confirmPassword: e.target.value }))
+	const onChangeGender = e => setForm(prev => ({ ...prev, gender: e.target.value }))
+	const onChangeTerms = e => setForm(prev => ({ ...prev, terms: e.target.checked }))
+
+	const { registration, ready } = useAuth()
 
 	const onSubmitForm = (event) => {
 		event.preventDefault()
-		console.log(form);
-		if (form.userName === '') { return alert("User Name is required.") }
-		if (!emailRegExt.test(form.email)) { return alert("Email is invalid.") }
-		if(!passwordRegExt.test(form.password)) { return alert("Password is invalid.\nMin symbols 6, Max symbols 8, it's must be only alphanumeric.") }
-		if(form.password !== form.confirmPassword) { return alert("Confirm password must be equal Password.") }
-		if(!(["male", "female", "other"]).includes(form.gender)) { return alert("Unknown gender.") }
-		if(!form.terms) { return alert("You must accept our terms.") }
-		api.register(form)
+		if (form.terms) {
+			registration(form)
+		} else {
+			alert("You must accept terms.")
+		}
 	}
 
 	return (
@@ -37,11 +36,25 @@ function SignUp({ toggleForm }) {
 				</div>
 				<label htmlFor='email'>Email:</label>
 				<div>
-					<input className="login-form-inp" type="email" id='email' name="email" value={form.email} onChange={onChangeEmail} />
+					<input
+						className="login-form-inp"
+						type="email"
+						id='email'
+						name="email"
+						value={form.email}
+						onChange={onChangeEmail}
+					/>
 				</div>
 				<label htmlFor='password'>Password:</label>
 				<div>
-					<input className="login-form-inp" type="password" id='password' name="password" value={form.password} onChange={onChangePassword} />
+					<input
+						className="login-form-inp"
+						type="password"
+						id='password'
+						name="password"
+						value={form.password}
+						onChange={onChangePassword}
+					/>
 				</div>
 				<label htmlFor='confirmPassword'>Confirm Password:</label>
 				<div>
@@ -68,8 +81,10 @@ function SignUp({ toggleForm }) {
 						<span>Agree to Terms</span>
 					</label>
 				</div>
-				<Button type='submit' buttonSize='btn-small'>Sign Up</Button>
-				<Button type='button' buttonSize='btn-small' onClick={toggleForm}>Have account</Button>
+				<div className='control-section'>
+					<Button type='submit' buttonSize='btn-small'>Sign Up</Button>
+					<Button type='button' buttonSize='btn-small' onClick={toggleForm}>Have account</Button>
+				</div>
 			</form>
 		</div>
 	);
