@@ -91,17 +91,3 @@ function UserPage() {
 
 export default UserPage;
 
-
-//
-// <PopupButton popupElement={<ChangeEmail />}>
-//     <div className='icon-btn'>
-//         <MdAlternateEmail />
-//         <p>Change Email</p>
-//     </div>
-// </PopupButton>
-// <PopupButton popupElement={<ChangePassword />}>
-//     <div className='icon-btn'>
-//         <RiLockPasswordLine />
-//         <p>Change Password</p>
-//     </div>
-// </PopupButton>

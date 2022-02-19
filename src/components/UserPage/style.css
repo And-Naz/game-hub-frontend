@@ -40,7 +40,6 @@
 
 .user_info h3 {
     text-align: center;
-    /*padding-bottom: 7px;*/
     padding-top: 7px;
 }
 
@@ -124,7 +123,7 @@ input[type='file'] {
     justify-content: space-around;
 }
 
-.email label, .password label {
+.email_container label, .password_container label {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -137,7 +136,7 @@ input[type='file'] {
     margin-top: 10px;
 }
 
-.credit_card_container, .email, .password {
+.credit_card_container, .email_container, .password_container {
     position: fixed;
     top: 0;
     left: 0;
@@ -160,7 +159,7 @@ input[type='file'] {
     align-items: center;
 }
 
-.email form, .password form  {
+.email_container form, .password_container form  {
     position: relative;
     justify-content: center;
     padding: 30px;

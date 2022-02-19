@@ -4,7 +4,7 @@ import '../AuthComponent/style.css'
 
 function ChangeEmail(props) {
     return (props.triggerEmail) ? (
-        <div className='navbar-signup-form email'>
+        <div className='navbar-signup-form email_container'>
             <form action="#" method='post' >
                 <label htmlFor='curr_email'>Current Email:</label>
                 <div>
@@ -17,7 +17,6 @@ function ChangeEmail(props) {
                 <div className='sbm-btn'>
                     <Button type='submit' buttonSize='btn-small'>Submit</Button>
                     <Button onClick={() => props.setTriggerEmail(false)} type='button' buttonSize='btn-small'>Close</Button>
-                    {props.children}
                 </div>
 
             </form>

@@ -78,7 +78,6 @@ function CreditCard(props) {
                 <div className='add_card_section'>
                     <Button type='submit' buttonSize='btn-small'>Add Card</Button>
                     <Button onClick={() => props.setTrigger(false)} type='button' buttonSize='btn-small'>Close</Button>
-                    {props.children}
                 </div>
             </div>
         </section>
