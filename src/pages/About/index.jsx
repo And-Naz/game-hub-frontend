@@ -36,10 +36,6 @@ function About() {
 					Lorem Ipsum is simply dummy text of the printing.
 				</Card>
 			</div>
-
-			<br/><br/><br/><br/>
-			<UserPage />
-			<br/><br/><br/><br/><br/><br/><br/><br/>
 		</section>
 	);
 }
