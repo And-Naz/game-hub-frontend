@@ -1,11 +1,29 @@
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { updateHomePageGames } from "../../store/gamesReducerDuck"
+import GameService from "../../services/GameService"
 import Image from "../../components/ui/Image";
 import Button from "../../components/ui/Button";
-import api from "../../api"
 import CarouselBox from '../../components/CarouselBox'
 import NewsBox from '../../components/NewsBox'
 import './home.css'
 
-function Home({ cardsInfo }) {
+function getGames(state) {
+	return state.games.homePage
+}
+
+function Home() {
+	const games = useSelector(getGames)
+	const dispatcher = useDispatch()
+	useEffect(() => {
+		GameService.all({ limit: 4 })
+			.then(
+				res => {
+					dispatcher(updateHomePageGames(res))
+				},
+				console.log
+			)
+	}, [])
 	return (
 		<>
 			<section className="page">
@@ -22,17 +40,25 @@ function Home({ cardsInfo }) {
 					<Button children='Learn More' type='button' buttonSize='btn-large' />
 				</div>
 				<div className="page__carousel">
-					<CarouselBox info={cardsInfo} content={"Header"} title={false} />
+					{
+						!!games.length && (<CarouselBox info={games} content={"Header"} title={false} />)
+					}
 				</div>
 			</section>
 			<section className="games">
-				<CarouselBox info={cardsInfo} content={"Games"} title={true} />
+				{
+					// !!games.length && (<CarouselBox info={games} content={"Games"} title={true} />)
+				}
 			</section>
 			<section className="discounts">
-				<CarouselBox info={cardsInfo} content={"Discounts"} title={true} />
+				{
+					// !!games.length && (<CarouselBox info={games} content={"Discounts"} title={true} />)
+				}
 			</section>
 			<section className="latest-news">
-				<NewsBox info={cardsInfo} content={"Latest News"} title={true} />
+				{
+					// !!games.length && (<NewsBox info={games} content={"Latest News"} title={true} />)
+				}
 			</section>
 		</>
 
