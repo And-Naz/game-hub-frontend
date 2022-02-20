@@ -2,7 +2,9 @@ import React, {Component} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./PartnerSlider.css"
+import "./PartnerSlider.css";
+
+
 
 const settings = {
     dots: true,
@@ -40,7 +42,7 @@ const settings = {
     ]
 };
 
-export default class Partners extends Component {
+ class PartnersSlider extends Component {
     render() {
         return (
             <div className='images-container-wrapper'>
@@ -87,6 +89,6 @@ export default class Partners extends Component {
     }
 }
 
-
+export default PartnersSlider
 
 
