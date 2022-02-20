@@ -5,6 +5,7 @@
 .card{
     position: relative;
     height: max-content;
+    height: 200px;
 }
 .card .card__img{
     opacity: .5;

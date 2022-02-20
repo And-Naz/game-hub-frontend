@@ -1,4 +1,4 @@
-import { lazy } from "react"
+import { lazy ,Suspense} from "react"
 import  {GAMES_INFO} from '../constants/GamesInfo'
 const Home = lazy(() => import('./Home'))
 const Games = lazy(() => import('./Games'))
@@ -7,6 +7,8 @@ const Score = lazy(() => import('./Score'))
 const News = lazy(() => import('./News'))
 const About = lazy(() => import('./About'))
 const NotFount = lazy(() => import('./NotFount'))
+
+
 const pages = [
 	{
 		path: "",

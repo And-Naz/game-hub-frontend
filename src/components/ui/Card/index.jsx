@@ -5,7 +5,7 @@ import GamesContent from "./GamesContent"
 import DiscountsContent from "./DiscountsContent"
 import NewsContent from "./NewsContent"
 import Image from  '../Image';
-
+import Loader from '../Loader';
 import "./style.css";
 
 
@@ -15,8 +15,7 @@ const Card = forwardRef(({data,content,...otherProps},ref) => {
     <Link to={`/games/game/${id}`}  {...otherProps} className="card__link">
       <div className="card" ref={ref}>
             <div className="card__shape">
-                <Image className="card__img" src={url} alt={`${name}_img`}/>
-                {/* <img className="card__img" src={url} alt={`${name}_img`}/>   */}
+                <Image className="card__img" src={url} alt={`${name}_img`} />
             </div>
          
           {   
@@ -40,7 +39,7 @@ const Card = forwardRef(({data,content,...otherProps},ref) => {
               :null
           }
       </div>
-      </Link>
+    </Link>
 
   );
 })

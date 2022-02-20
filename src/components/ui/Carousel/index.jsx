@@ -1,4 +1,4 @@
-import React,{useState,useEffect,Suspense ,lazy, useCallback  } from "react"
+import React,{useState,useEffect,Suspense , useCallback  } from "react"
 import Slider from 'infinite-react-carousel';
 import Card from "../Card"
 import style from "./style.css"
@@ -37,14 +37,16 @@ const Carousel = ({info = [],content}) =>{
     return (
         <div className="slider " >
             <Slider {...settings} >
-            {
+                
+                    {
 
-                    cardInfo.map(el =>
-                        <Card key={el.id} data={el} content={content}/>
-                    )
-            }
+                            cardInfo.map(el =>
+                                <Card key={el.id} data={el} content={content}/>
+                            )
+                    }
+                
             </Slider>
-        </div>
+    </div>
         
     )
 }

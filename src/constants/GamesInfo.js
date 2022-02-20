@@ -2,6 +2,7 @@ import Shareds from '../assets/games-img/shareds.jpg'
 import FieldsOfFuryio from '../assets/games-img/fieldsoffuryio.jpg'
 import Snake from '../assets/games-img/snake.jpg'
 import BattleTanksIo from '../assets/games-img/battle-tanks-io.jpg'
+import { useSelector } from "react-redux";
 
 
 export const GAMES_INFO = [
@@ -328,3 +329,4 @@ export const GAMES_INFO = [
 		date: '21st March 2015'
 	},
 ]
+

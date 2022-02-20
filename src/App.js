@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import pages from "./pages"
 import useAuth from "./hooks/useAuth";
 import './assets/css/App.css';
+
+import Loader from './components/ui/Loader'
 function App() {
 	const { checkAuth } = useAuth()
 	useEffect(() => {
@@ -13,7 +15,7 @@ function App() {
 		<>
 			<Header />
 			<main className="page-wrapper">
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense fallback={<Loader/>}>
 					<Routes>
 						{
 							pages.map(({ path, component }) => {

@@ -2,9 +2,11 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import authReducerDuck from "./authReducerDuck"
+import gamesInfoReducerDuck from './gamesInfoReducerDuck'
 
 const rootReducer = combineReducers({
-	auth: authReducerDuck
+	auth: authReducerDuck,
+	gamesInfo: gamesInfoReducerDuck
 })
 
 
