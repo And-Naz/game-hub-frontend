@@ -1,5 +1,5 @@
-import { Asynchronous, Synchronous } from "./ActionCreatorFactory"
-import imgSrc from "../assets/images/300x200.jpg"
+import { Asynchronous, Synchronous } from "../ActionCreatorFactory"
+import imgSrc from "../../assets/images/300x200.jpg"
 // import Shareds from '../assets/games-img/shareds.jpg'
 // import FieldsOfFuryio from '../assets/games-img/fieldsoffuryio.jpg'
 // import Snake from '../assets/games-img/snake.jpg'

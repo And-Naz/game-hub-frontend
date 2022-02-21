@@ -1,4 +1,4 @@
-import { Asynchronous, Synchronous } from "./ActionCreatorFactory"
+import { Asynchronous, Synchronous } from "../ActionCreatorFactory"
 
 // Actions
 const UPDATE_HOME_PAGE_NEWS = 'newsReducer/UPDATE_HOME_PAGE_NEWS';

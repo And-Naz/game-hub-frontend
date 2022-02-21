@@ -1,4 +1,4 @@
-import { Asynchronous, Synchronous } from "./ActionCreatorFactory"
+import { Asynchronous, Synchronous } from "../ActionCreatorFactory"
 
 // Actions
 const SET_AUTH = 'authReducer/SET_AUTH';

@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 import AuthService from '../services/AuthService'
-import { setAuth, setUser } from '../store/authReducerDuck'
+import { setAuth, setUser } from '../store/reducers/authReducerDuck'
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
 
