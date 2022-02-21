@@ -1,12 +1,16 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import authReducerDuck from "./authReducerDuck"
-import gamesReducerDuck from './gamesReducerDuck'
+import authReducerDuck from "./reducers/authReducerDuck"
+import gamesReducerDuck from './reducers/gamesReducerDuck'
+import newsReducerDuck from './reducers/newsReducerDuck'
+import aboutReducerDuck from './reducers/aboutReducerDuck'
 
 const rootReducer = combineReducers({
 	auth: authReducerDuck,
-	games: gamesReducerDuck
+	games: gamesReducerDuck,
+	news: newsReducerDuck,
+	about: aboutReducerDuck
 })
 
 

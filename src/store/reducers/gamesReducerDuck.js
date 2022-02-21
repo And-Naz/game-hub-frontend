@@ -6,7 +6,7 @@ import imgSrc from "../assets/images/300x200.jpg"
 // import BattleTanksIo from '../assets/games-img/battle-tanks-io.jpg'
 
 // Actions
-const UPDATE_HOME_PAGE_GAMES = 'authReducer/UPDATE_HOME_GAMES';
+const UPDATE_HOME_PAGE_GAMES = 'gamesReducer/UPDATE_HOME_PAGE_GAMES';
 
 
 // Default State
@@ -16,7 +16,7 @@ const defaultState = {
 }
 
 // Reducer
-export default function authReducer(state = defaultState, { type, payload } = {}) {
+export default function gamesReducer(state = defaultState, { type, payload } = {}) {
 	switch (type) {
 		case UPDATE_HOME_PAGE_GAMES: {
 			return { ...state, homePage: [...payload] }
