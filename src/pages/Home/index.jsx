@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateHomePageGames } from "../../store/gamesReducerDuck"
+import { updateHomePageGames } from "../../store/reducers/gamesReducerDuck"
 import GameService from "../../services/GameService"
 import Image from "../../components/ui/Image";
 import Button from "../../components/ui/Button";
