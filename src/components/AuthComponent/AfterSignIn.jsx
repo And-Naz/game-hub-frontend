@@ -1,15 +1,16 @@
-import React from 'react';
-import Button from "../ui/button";
+import useAuth from "../../hooks/useAuth";
+import Button from "../ui/Button";
 
 function AfterSignIn() {
-    return (
-        <div className='after-sign-form'>
-                <div className='form-control-section'>
-                    <Button  type='button' buttonSize='btn-small'>Profile Page</Button>
-                    <Button onClick={() => console.log('logout')} type='button' buttonSize='btn-small'>Log Out</Button>
-                </div>
-        </div>
-    );
+	const { logout } = useAuth()
+	return (
+		<div className='navbar-login-form'>
+			<div className='authorized-section'>
+				<Button type='button' buttonSize='btn-small'>Profile Page</Button>
+				<Button onClick={logout} type='button' buttonSize='btn-small'>Log Out</Button>
+			</div>
+		</div>
+	);
 }
 
 export default AfterSignIn;
