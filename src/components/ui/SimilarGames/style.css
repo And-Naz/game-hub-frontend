@@ -1,0 +1,49 @@
+.game-play__similar-games.similar-games {
+  margin: 3px 16px 0 0;
+  padding: 10px 0 0px 0;
+  position: relative;
+  left: 8px;
+  color: #1988bf;
+  background-color: #222;
+  height: max-content;
+  text-align: left;
+}
+.similar-games__title{
+  position: absolute;
+  z-index: 9999;
+  width: 196px;
+  height: 35px;
+  left: 4px;
+  margin: -7px;
+  background-position: -1px 0;
+}
+.similar-games__title h2{
+  font-size: 16px;
+  margin: 0;
+  font-weight: normal;
+  position: relative;
+  top: 7px;
+  left: 12px;
+  color: #ccc;
+  width: max-content;
+}
+
+.game-play__similar-games.similar-games div{
+    font-size: 16px;
+    color: #ccc;
+    /* position: relative; */
+    /* left: 13px; */
+}
+.similar-games__title h2:first-letter {
+  color: #F00;
+  font-weight: bold;
+}
+.game-play__similar-games.similar-games ul{
+  margin-left: -33px;
+  margin-top: 9px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,150px);
+  grid-template-rows: 200px;
+  grid-gap: 13px;
+}
+

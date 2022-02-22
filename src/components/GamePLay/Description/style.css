@@ -1,0 +1,73 @@
+.game-play__description.description {
+    position: relative;
+    background-color: var(--second-bg-color);
+    padding: 8px 15px 12px 15px;
+    margin: -4px 8px 0 8px;
+    text-align: left;
+}
+
+.description__prr {
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 1px;
+    margin-bottom: 8px;
+}
+.description__prr:first-letter {
+    color: #F00;
+    font-weight: bold;
+}
+.description__infotext {
+    position: relative;
+}
+
+.description__content-wrapper {
+    line-height: 18px;
+    display: block;
+    overflow: hidden;
+}
+.description__content-wrapper.contracted{
+    height: 50px;
+}
+.description__content-wrapper.expanded{
+    height: max-content;
+}
+.description__content-wrapper p {
+    display: inline;
+    margin: 6px 0 0 0;
+    line-height: 18px;
+}
+p.description__more-link {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.description__content-wrapper.contracted + p.description__more-link{
+    background: 0px 0px repeat-y transparent;
+    bottom: -7px;
+    display: inline-block;
+    margin: 0px;
+    padding-left: 40px;
+    right: -7px;
+    position: absolute;
+}
+
+.description__content-wrapper.expanded + p.description__more-link{
+    position: relative;
+    bottom: 0px;
+    line-height: 0;
+    text-align: right;
+}
+
+
+a.description__more {
+    text-decoration: underline;
+    padding-right: 7px;
+    background-color: #222;
+    color: #ccc;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+a.description__more:hover {
+    color: #eee;
+}

@@ -1,0 +1,32 @@
+.rating {
+    position: relative;
+    display: inline-block;
+}
+.rating:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0000;
+    width: 100%;
+    height: 100%;
+}
+.rating-front{
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .1s;
+}
+.rating-back {
+    white-space: nowrap;
+}
+.svg-inline--fa {
+    overflow: visible;
+    width: 1.125em;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    color: #dbb40b;
+}

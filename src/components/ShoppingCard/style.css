@@ -1,18 +1,80 @@
-.card-wrapper {
-    height: 20px;
-    right: 0;
-    top: 0;
+.bag-wrapper {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border: 2px solid white;
+    background: rgba(81, 81, 100, 0.6);
+    right: 10px;
+    top: 100px;
+    opacity: 1;
+}
+
+.styles--sc-card {
+    display: flex;
+    /*vertical-align: center;*/
+    /*justify-content: space-between;*/
+
+
+
+    font-family: Lato,sans-serif;
+    letter-spacing: .06em;
+    color: white;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    transform: skew(-7deg);
+
+    padding: 0px 30px;
+    margin: 0px 5px 10px;
+    font-size: 14px;
 }
 
 
-.card-icon {
+
+.styles--sc-card .styles--sc-card__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.styles--sc-card > img {
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 90px;
+    height: 90px;
+
 
 }
 
-.card-coins {
-
+.styles--sc-card .styles--sc-card__column-wrapper>* {
+    display: inline-block;
+    flex: 0 1 auto;
 }
 
-.buy-button {
+a {
+    color: #bd184a;
+    background-color: transparent;
+    font-weight: 400;
+    text-decoration: none;
+}
 
+.styles--sc-card .styles--sc-card__prices {
+    z-index: 3;
+    display: flex;
+    flex: 0 1 auto;
+    min-width: 1px;
+}
+
+.styles--sc-card2 {
+    background: #1988bf;
+}
+
+.styles--sc-card__column-wrapper {
+    border: 1px solid #2e2415;
+    border-radius: 10%;
+    margin-top: 10px;
+}
+
+.styles--sc-card__column-wrapper > div {
+    overflow: hidden;
+    margin-top: 10px;
 }
