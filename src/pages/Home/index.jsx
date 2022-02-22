@@ -18,8 +18,9 @@ function getLatestNews(state) {
 }
 
 function Home() {
-	const games = useSelector(getGames)
 	const dispatcher = useDispatch()
+	const games = useSelector(getGames)
+	const latestNews = useSelector(getLatestNews)
 	useEffect(() => {
 		GameService.all({ limit: 4 })
 			.then(
@@ -30,7 +31,6 @@ function Home() {
 			)
 	}, [])
 
-	const latestNews = useSelector(getLatestNews)
 	useEffect(() => {
 		NewsService.latest()
 			.then(
