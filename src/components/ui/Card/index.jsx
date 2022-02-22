@@ -35,14 +35,20 @@ const Card = forwardRef(({ data, content, ...otherProps }, ref) => {
 						: null
 				}
 				{
-					// content === "Discounts" ?
-					// 	<DiscountsContent name={name} rating={rating} price={price} sale={sale} saleFrom={saleFrom} />
-					// 	: null
+					content === "Discounts" ?
+						<DiscountsContent 
+							name={name} 
+							rating={rating} 
+							price={price} 
+							isDiscounted={isDiscounted} 
+							percentOfDiscount={percentOfDiscount} 
+						/>
+						: null
 				}
 				{
-					// content === "Latest News" ?
-					// 	<NewsContent rating={rating} />
-					// 	: null
+					content === "Latest News" ?
+						<NewsContent rating={rating} />
+						: null
 				}
 			</div>
 		</Link>

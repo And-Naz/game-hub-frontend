@@ -7,6 +7,7 @@ import imgSrc from "../../assets/images/300x200.jpg"
 
 // Actions
 const UPDATE_HOME_PAGE_GAMES = 'gamesReducer/UPDATE_HOME_PAGE_GAMES';
+const UPDATE_GAME_PAGE_GAMES = 'gamesReducer/UPDATE_GAME_PAGE_GAMES';
 
 
 // Default State
@@ -21,9 +22,13 @@ export default function gamesReducer(state = defaultState, { type, payload } = {
 		case UPDATE_HOME_PAGE_GAMES: {
 			return { ...state, homePage: [...payload] }
 		}
+		case UPDATE_GAME_PAGE_GAMES: {
+			return { ...state, gamePage: [...payload] }
+		}
 		default: return state;
 	}
 }
 
 // Action Creators
 export const updateHomePageGames = Asynchronous(UPDATE_HOME_PAGE_GAMES)
+export const updateGamePageGames = Asynchronous(UPDATE_GAME_PAGE_GAMES)

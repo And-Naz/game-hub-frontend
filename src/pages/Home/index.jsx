@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateHomePageGames } from "../../store/reducers/gamesReducerDuck"
+import { updateHomePageNews } from "../../store/reducers/newsReducerDuck"
 import GameService from "../../services/GameService"
+import NewsService from "../../services/NewsService"
 import Image from "../../components/ui/Image";
 import Button from "../../components/ui/Button";
 import CarouselBox from '../../components/CarouselBox'
@@ -10,6 +12,9 @@ import './home.css'
 
 function getGames(state) {
 	return state.games.homePage
+}
+function getLatestNews(state) {
+	return state.news.homePage
 }
 
 function Home() {
@@ -20,6 +25,17 @@ function Home() {
 			.then(
 				res => {
 					dispatcher(updateHomePageGames(res))
+				},
+				console.log
+			)
+	}, [])
+
+	const latestNews = useSelector(getLatestNews)
+	useEffect(() => {
+		NewsService.latest()
+			.then(
+				res => {
+					dispatcher(updateHomePageNews(res))
 				},
 				console.log
 			)
@@ -47,17 +63,17 @@ function Home() {
 			</section>
 			<section className="games">
 				{
-					// !!games.length && (<CarouselBox info={games} content={"Games"} title={true} />)
+					!!games.length && (<CarouselBox info={games} content={"Games"} title={true} />)
 				}
 			</section>
 			<section className="discounts">
 				{
-					// !!games.length && (<CarouselBox info={games} content={"Discounts"} title={true} />)
+					!!games.length && (<CarouselBox info={games} content={"Discounts"} title={true} />)
 				}
 			</section>
 			<section className="latest-news">
 				{
-					// !!games.length && (<NewsBox info={games} content={"Latest News"} title={true} />)
+					!!games.length && (<NewsBox info={latestNews} content={"Latest News"} title={true} />)
 				}
 			</section>
 		</>
