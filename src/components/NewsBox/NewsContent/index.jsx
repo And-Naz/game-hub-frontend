@@ -6,7 +6,7 @@ import './style.css'
 
 const NewsContent = ({data}) => {
     const {name,date,gameUrl,description,tags} = data
-
+    
     return (
         <div className='news__content news-content'>
              <div className="news-content__col">

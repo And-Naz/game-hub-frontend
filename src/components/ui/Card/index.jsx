@@ -13,6 +13,8 @@ const Card = forwardRef(({data,content,...otherProps},ref) => {
   const {id,url,name,rating,price,sale,saleFrom} = data
   return (
     <Link to={`/games/game/${id}`}  {...otherProps} className="card__link">
+
+
       <div className="card" ref={ref}>
             <div className="card__shape">
                 <Image className="card__img" src={url} alt={`${name}_img`} />
