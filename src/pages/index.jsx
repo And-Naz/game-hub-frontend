@@ -1,7 +1,9 @@
 import { lazy, Suspense } from "react"
 import { Navigate, Routes, Route } from "react-router-dom"
 import Loader from '../components/ui/Loader'
-import { GAMES_INFO } from '../constants/GamesInfo'
+import { useSelector } from "react-redux"
+import { useMemo } from "react"
+
 const Home = lazy(() => import('./Home'))
 const Games = lazy(() => import('./Games'))
 const Play = lazy(() => import('./Play'))
@@ -14,10 +16,10 @@ const pageWithoutAuth = () => {
 	const pages = new Map()
 	pages.set("", <Home />)
 	pages.set("/home", <Navigate to="" replace />)
-	pages.set("/games", <Games cardsInfo={GAMES_INFO} />)
-	pages.set("/games/filter/:category/:name/", <Games cardsInfo={GAMES_INFO} />)
-	pages.set("/games/game/:id", <Play gamesInfo={GAMES_INFO} />)
-	pages.set("/games/game/:id/:screen", <Play gamesInfo={GAMES_INFO} />)
+	pages.set("/games", <Games />)
+	pages.set("/games/filter/:category/:name/", <Games />)
+	pages.set("/games/game/:id", <Play />)
+	pages.set("/games/game/:id/:screen", <Play />)
 	pages.set("/score", <Score />)
 	pages.set("/news", <News />)
 	pages.set("/about", <About />)
@@ -26,20 +28,22 @@ const pageWithoutAuth = () => {
 }
 const pageWithAuth = () => {
 	const pages = pageWithoutAuth()
-	/* here we can add auth routes */
+	pages.set("/profile", <div>Profile page</div>)
 	return pages
 }
-const routeGenerator = routes => {
-	return [...routes].reduce((acc, [path, component]) => {
+const createRoutes = isAuth => {
+	const pages = isAuth ? pageWithAuth() : pageWithoutAuth();
+	return [...pages].reduce((acc, [path, component]) => {
 		acc.push({ path, component })
 		return acc
 	}, [])
 }
-const createRoutes = isAuthenticated => {
-	return routeGenerator(isAuthenticated ? pageWithAuth() : pageWithoutAuth())
-}
+
+const getIsAuth = state => state.auth.isAuth;
+
 export default function AppRoutes() {
-	const routes = createRoutes(false)
+	const isAuth = useSelector(getIsAuth)
+	const routes = useMemo(() => createRoutes(isAuth), [isAuth])
 	return (
 		<Suspense fallback={<Loader />}>
 			<Routes>
