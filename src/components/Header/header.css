@@ -12,6 +12,10 @@
 	z-index: 10000;
 }
 
+.header + *:first-child {
+	padding-top: 80px;
+}
+
 .header__navigation {
 	height: 100%;
 	max-width: 1000px;
@@ -102,6 +106,7 @@
 
 .homeLink > * + * {
 	margin-left: 15px;
+	white-space: nowrap
 }
 
 .header__controls-section {
@@ -116,8 +121,27 @@
 .header__control {
 	padding: 1rem 0.5rem;
 }
-
+button.search_btn {
+	cursor: pointer;
+    background-color: #0000;
+    border: 0;
+}
 .svg-inline--fa {
 	height: 1em;
 	color: white;
+}
+
+@media (max-width: 900px) {
+	.navigation__list + .navigation__list {
+		margin-left: 0.5rem;
+	}
+}
+
+@media (max-width: 870px) {
+	.header__navigation {
+		margin-left: 1rem;
+	}
+	.header__controls-section {
+		margin-right: 1rem;
+	}
 }

@@ -1,19 +1,30 @@
 import { Suspense } from "react"
+import { useEffect } from "react"
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import pages from "./pages"
+import Pages from "./pages"
+import useAuth from "./hooks/useAuth";
 import './assets/css/App.css';
 import Footer from "./components/Footer/Footer";
+import FooterC from "./components/FooterC";
 import Social from "./components/Social";
 
 function App() {
+	const { checkAuth } = useAuth()
+	useEffect(() => {
+		checkAuth()
+	}, [])
 	return (
-		<div className="App">
-
+		<>
+			<Header />
+			<main className="page-wrapper">
+				<Pages />
+			</main>
 			<Social />
 			<Footer />
 			<FooterC/>
-		</div>
+		</>
+			
 	);
 }
 
