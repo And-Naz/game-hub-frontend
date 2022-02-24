@@ -21,14 +21,14 @@ function Games({ cardsInfo }) {
 				console.log
 			)
 	}, [])
-	let gameInfo = [...gamesAll]
+	// let gameInfo = [...gamesAll]
 	const params = useParams()
 	const [games, setGames] = useState([])
 
 	useEffect(() => {
 		if (params.category) {
 
-			gameInfo = gameInfo.filter(el => {
+			gamesAll = gamesAll.filter(el => {
 				let flag
 				if (Array.isArray(el[params.category])) {
 					flag = el[params.category].find(item => {
@@ -43,7 +43,7 @@ function Games({ cardsInfo }) {
 				}
 			})
 		}
-		setGames(gameInfo)
+		setGames(gamesAll)
 	}, [params])
 
 	return (

@@ -1,21 +1,39 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { updateGamePageGames } from "../../store/reducers/gamesReducerDuck"
+import GameService from "../../services/GameService"
 import GamePLay from "../../components/GamePLay"
 import './style.css'
 
-function Play({ gamesInfo = [] }) {
-	const gameInfo = [...gamesInfo]
-	const params = useParams()
+function getGames(state) {
+	return state.games.gamePage
+}
+function Play() {
+	const gamesAll = useSelector(getGames)
+	const dispatcher = useDispatch()
 	const [game, setGame] = useState(null)
+	const params = useParams()
 	useEffect(() => {
-		if (gameInfo[params.id - 1]) {
-			setGame(gameInfo[params.id - 1])
+		GameService.all()
+			.then(
+				res => {
+					dispatcher(updateGamePageGames(res))
+				},
+				console.log
+			)
+	}, [])
+	
+	// const gameInfo = [...gamesAll]
+	useEffect(() => {
+		if (gamesAll[params.id - 1]) {
+			setGame(gamesAll[params.id - 1])
 		}
 	}, [params])
 
 	return (
 		<section className="games">
-			{game ? <GamePLay info={game} similarGames={gamesInfo} content={"Similar Games"} params={params} /> : null}
+			{game ? <GamePLay info={game} similarGames={gamesAll} content={"Similar Games"} params={params} /> : null}
 		</section>
 	);
 }

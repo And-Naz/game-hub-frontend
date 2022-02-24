@@ -9,7 +9,6 @@ const SimilarGames = lazy(() => import('../ui/SimilarGames'));
 const FullScreen = lazy(() => import('./FullScreen'));
 
 const GamePlay = ({info={}, content, similarGames=[],params}) => {
-
     const [isFullscreen,setIsFullscreen] = useState('small')
     const navigate = useNavigate() 
     const onClose = useCallback(() => {
@@ -30,15 +29,15 @@ const GamePlay = ({info={}, content, similarGames=[],params}) => {
                     isFullscreen === 'fullscreen'?
                         <Suspense  fallback={<div>Loading...</div>}>
                             <div className='game-play__full-screen-box'>
-                                <FullScreen info={info} goBack={onClose}/>
+                                <FullScreen iframeUrl={info.src} goBack={onClose}/>
                             </div>
                         </Suspense>
                     :
                         <Suspense  fallback={<div>Loading...</div>}>
                             <div className='game-play__screen-box'>
                                 <Info info={info}/>
-                                <Description info={info}/>
-                                <Tray info={info} goBack={onClose}/>
+                                <Description description={info.description}/>
+                                <Tray iframeUrl={info.src} goBack={onClose}/>
                                 <SimilarGames  info={similarGames} content={content}/>
                             </div>
                         </Suspense>

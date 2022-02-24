@@ -121,7 +121,11 @@
 .header__control {
 	padding: 1rem 0.5rem;
 }
-
+button.search_btn {
+	cursor: pointer;
+    background-color: #0000;
+    border: 0;
+}
 .svg-inline--fa {
 	height: 1em;
 	color: white;
