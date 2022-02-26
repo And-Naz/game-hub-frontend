@@ -7,7 +7,6 @@ import NewsContent from "./NewsContent"
 import Image from '../Image';
 import Loader from '../Loader';
 import "./style.css";
-import React from "react";
 
 
 const Card = forwardRef(({ data, content, ...otherProps }, ref) => {

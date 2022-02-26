@@ -87,7 +87,7 @@
 	padding-left: 15px;
 }
 
-/*
+/* 
 
 .styles--sc-card {
     display: flex;
@@ -97,10 +97,6 @@
     position: relative;
     background-color: transparent;
     cursor: pointer;
-<<<<<<< HEAD
-    transform: skew(-7deg);
-=======
->>>>>>> change-date-to-redux
 
     padding: 0px 30px;
     margin: 0px 5px 10px;

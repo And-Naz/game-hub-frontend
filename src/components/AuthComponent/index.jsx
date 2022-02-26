@@ -8,7 +8,7 @@ const getIsAuth = state => state.auth.isAuth
 
 const AuthComponent = forwardRef(function (props, ref) {
 	const isAuth = useSelector(getIsAuth)
-	const [showProfileControls, setShowProfileControls] = useState(false)
+	const [showProfileControls, setShowProfileControls] = useState(isAuth)
 	const [isSignIn, setIsSignUp] = useState(true)
 	const toggleForm = useCallback((e) => {
 		setTimeout(() => {

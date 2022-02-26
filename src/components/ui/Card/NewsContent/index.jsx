@@ -1,5 +1,4 @@
 
-import React from "react";
 import HexagonRating from '../../HexagonRating';
 import MetaDataGame from '../../MetaDataGame';
 import style from './style.css'

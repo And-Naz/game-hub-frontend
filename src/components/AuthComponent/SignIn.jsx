@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Button from "../ui/Button";
 import useAuth from '../../hooks/useAuth';
 import './style.css'
-import React from "react";
 
 function SignIn({ toggleForm }) {
 

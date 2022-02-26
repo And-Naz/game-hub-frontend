@@ -5,7 +5,6 @@ import { addGamePageGames } from "../../store/reducers/gamesReducerDuck"
 import GameService from "../../services/GameService"
 import GamePLay from "../../components/GamePLay"
 import './style.css'
-import React from "react";
 
 function getGames(state) {
 	return state.games

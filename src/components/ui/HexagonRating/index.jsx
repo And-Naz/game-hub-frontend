@@ -1,5 +1,4 @@
 import style from "./style.module.css"
-import React from "react";
 const HexagonRating = ({rating}) => {
     return (
         <div className={style.hexagonRating}>

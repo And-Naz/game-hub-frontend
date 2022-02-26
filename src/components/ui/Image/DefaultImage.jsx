@@ -1,6 +1,5 @@
 import {forwardRef} from 'react';
 import './style.css'
-import React from "react";
 const DefaultImage = forwardRef(({src, alt, className = "", size = "standard", ...otherProps}, ref) => {
     if (!src || !alt) {throw new Error("Attributes src and alt are required.") }
     const sizeClass = (function() {

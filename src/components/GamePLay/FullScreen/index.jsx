@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import fullScreenSVG from "../../../assets/tray/fullscreen.svg"
 import TrayIframe from '../TrayIframe';
 import "./style.css"
-import React from "react";
 
 const FullScreen = ({ iframeUrl, goBack }) => {
 	const headerRef = useRef()

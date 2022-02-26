@@ -1,6 +1,5 @@
 import { useRef, forwardRef, useEffect } from "react";
 import DefaultImage from "./DefaultImage"
-import React from "react";
 const ObjectFitImages = import("object-fit-images").then(module => module.default)
 const PolyfilledImage = forwardRef(({ className = "", ...otherProps}, ref) => {
     const polyfillClassNames = className ? className + " " + "img--polyfill" : "img--polyfill";

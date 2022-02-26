@@ -1,5 +1,4 @@
 import Sale from "./Sale"
-import React from "react";
 
 const Rating = ({ price, isDiscounted, percentOfDiscount }) => {
 	return (
