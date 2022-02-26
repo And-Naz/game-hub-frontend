@@ -7,6 +7,7 @@ import AuthComponent from "../AuthComponent";
 import { useState } from "react";
 import './header.css'
 import Search from "../Search";
+import BurgerMenu from "../BurgerMenu";
 
 const Header = () => {
 	const [searchPopup, setSearchPopup] = useState(false);
@@ -18,7 +19,7 @@ const Header = () => {
 	return (
 		<header className='header' id="header">
 			<nav className='header__navigation navigation'>
-				<ul className="navigation__list">
+				<ul className="navigation__list ">
 					<li className="navigation__item">
 						<h1 className="header__title">
 							<NavLink to='' className="navLink homeLink">
@@ -28,7 +29,7 @@ const Header = () => {
 						</h1>
 					</li>
 				</ul>
-				<ul className="navigation__list">
+				<ul className="navigation__list menubar">
 					<li className="navigation__item">
 						<NavLink className='navLink' to='games'>Games</NavLink>
 					</li>
@@ -40,7 +41,7 @@ const Header = () => {
 					</li>
 				</ul>
 			</nav>
-			<aside className='header__controls-section'>
+			<aside className='header__controls-section menubar'>
 				<span className='header__control'>
 					<PopupButton popupElement={<AuthComponent />}><UserIcon /></PopupButton>
 				</span>
@@ -62,6 +63,7 @@ const Header = () => {
 					</a>
 				</span>
 			</aside>
+			<BurgerMenu />
 		</header>
 	)
 
