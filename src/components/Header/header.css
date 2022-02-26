@@ -39,8 +39,16 @@
 	align-items: center;
 }
 
+.navigation__list.navigation__list__column {
+	flex-direction: column;
+}
+
 .navigation__list + .navigation__list {
 	margin-left: 5rem;
+}
+
+.navigation-column .navigation__list + .navigation__list {
+	margin-left: 0;
 }
 
 .navigation__item {
@@ -131,6 +139,8 @@ button.search_btn {
 	color: white;
 }
 
+
+
 @media (max-width: 900px) {
 	.navigation__list + .navigation__list {
 		margin-left: 0.5rem;
@@ -143,5 +153,17 @@ button.search_btn {
 	}
 	.header__controls-section {
 		margin-right: 1rem;
+	}
+}
+
+@media (max-width: 580px) {
+	.menubar  {
+		display: none;
+		text-decoration: none;
+		flex-flow: column nowrap;
+		background: rgb(8,3,37);
+		height: 45vh;
+		width: 150px;
+		padding-top: 150px;
 	}
 }
