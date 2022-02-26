@@ -1,0 +1,198 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato,sans-serif;
+    font-size: 14px;
+    letter-spacing: .06em;
+    line-height: 20px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-wrap: break-word;
+    background: #080325;
+    background: rgba(8,3,37,.9);
+}
+
+footer {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.wrapper {
+    position: relative;
+    background-size: cover;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+footer .image {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: .5;
+}
+
+footer .social {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    text-align: center;
+    background: #080325;
+    background: rgba(8,3,37,.45);
+}
+
+footer .social .container {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.row:before {
+    display: table;
+    content: " ";
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h3, .h3 {
+    font-size: 24px;
+    line-height: 40px;
+}
+.h2, .h3, .h4, .h5, .h6 {
+    font-family: lato,sans-serif;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+body footer .social .social-icons {
+    max-width: 100%;
+}
+
+footer .social .social-icons {
+    max-width: 750px;
+}
+
+/*.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .modal-header:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {*/
+/*    clear: both;*/
+/*}*/
+
+/*.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {*/
+/*    display: table;*/
+/*    content: " ";*/
+/*}*/
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 85%;
+    margin-top: -2rem;
+}
+
+/*footer .social .social-icons .social-icon>a::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    background: rgba(8,3,37,.3);*/
+/*    -webkit-transition: .3s background ease;*/
+/*    -o-transition: .3s background ease;*/
+/*    transition: .3s background ease;*/
+/*    -webkit-transform: skew(-7deg);*/
+/*    -ms-transform: skew(-7deg);*/
+/*    transform: skew(-7deg);*/
+/*    -webkit-transform-origin: 50% 50%;*/
+/*    -ms-transform-origin: 50% 50%;*/
+/*    transform-origin: 50% 50%;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+/*.footerWrapper {*/
+/*    display: block;*/
+/*    flex-direction: row;*/
+/*    background: rgba(37, 30, 17, 0.92);*/
+/*    min-height: 50vh;*/
+/*    font-size: calc(8px + 2vmin);*/
+/*    color: white;*/
+/*}*/
+
+/*.footerSocialCardsContainer {*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*    padding: 20px;*/
+/*    font-size: 100%;*/
+/*    background-image: url("https://wp.nkdev.info/youplay/wp-content/uploads/2015/06/banner-bg.jpg");*/
+/*    background-size: cover;*/
+/*}*/
+
+/*.footerSocialCardsContainer div {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.footerSocialCardsContainer > div > img {*/
+/*    width: 40px;*/
+/*    max-width: 50px;*/
+/*}*/
+
+/*.footerSocialCards {*/
+/*    opacity: .8;*/
+/*    background: #2e2415;*/
+/*    margin: 10px;*/
+
+
+
+/*}*/
+
+/*.footerSocialCards:hover {*/
+/*    background: #f34c04;*/
+/*}*/
+
+/*.footerSocialCards > p {*/
+/*    font-size: 20px;*/
+/*    font-style: italic;*/
+/*}*/
+
+/*.footerCopyright {*/
+/*    font-size: 55%;*/
+/*    margin-top: 20px;*/
+/*}*/
