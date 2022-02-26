@@ -1,14 +1,12 @@
 
 .user_container {
     margin-top: 100px;
-    width: 70%;
-    grid-template-columns: 1fr 2fr;
+	 grid-template-columns: 1fr minmax(300px, 2fr);
     display: grid;
     grid-gap: 30px;
     grid-auto-rows: minmax(0, auto);
     align-items: start;
     color: #080325;
-
 }
 
 .user_info, .user_score, .user_settings, .user_card{
@@ -46,10 +44,12 @@
 
 
 .user_settings, .user_card {
+	flex: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0;
+	 padding: 2px;
+	 overflow: hidden;
 }
 
 svg {
@@ -168,4 +168,10 @@ input[type='file'] {
     max-width: 350px;
     background-color: #080325;
     border: 4px dashed white;
+}
+
+@media (max-width: 700px) {
+	.user_container {
+		grid-template-columns: 1fr;
+	}
 }

@@ -10,6 +10,7 @@ const Play = lazy(() => import('./Play'))
 const News = lazy(() => import('./News'))
 const About = lazy(() => import('./About'))
 const NotFount = lazy(() => import('./NotFount'))
+const UserPage = lazy(() => import('./UserPage'))
 
 const pageWithoutAuth = () => {
 	const pages = new Map()
@@ -26,7 +27,7 @@ const pageWithoutAuth = () => {
 }
 const pageWithAuth = () => {
 	const pages = pageWithoutAuth()
-	pages.set("/profile", <div>Profile page</div>)
+	pages.set("/profile", <UserPage />)
 	return pages
 }
 const createRoutes = isAuth => {

@@ -1,7 +1,6 @@
 import Card from "./card";
 import male from '../../assets/images/male_avatar.png'
 import female from '../../assets/images/female_avatar.png'
-import UserPage from "../../components/UserPage";
 
 function About() {
 	return (
@@ -16,23 +15,24 @@ function About() {
 			</div>
 			<div className="cards">
 				<Card name='Andranik Nazaryan'
-					  prof='Programmer'
-					  gender={male}>
-					Lorem Ipsum is simply dummy text of the printing.
+					prof='Programmer'
+					gender={male}>
+					Hard work developer, who like improve own skills and learn new technologies which can be helpful in career.
 				</Card>
 				<Card name='Vardan Petrosyan'
-					  prof='Programmer'
-					  gender={male}>
-					Lorem Ipsum is simply dummy text of the printing.
+					prof='Programmer'
+					gender={male}>
+					Adaptable Full Stack Developer provides holistic
+					skillsets suited to elevating all projects. Consistently expands knowledge base to foster ever-growing contributions. Comfortable working collaboratively or within team-based development environments.
 				</Card>
 				<Card name='Hasmik Margaryan'
-					  prof='Schematic Engineer'
-					  gender={female}>
+					prof='Schematic Engineer'
+					gender={female}>
 					Huge fan of Harry Potter. Future React JS developer.
 				</Card>
 				<Card name='Aram Baghdasaryan'
-					  prof='Pharmacist'
-					  gender={male}>
+					prof='Pharmacist'
+					gender={male}>
 					Lorem Ipsum is simply dummy text of the printing.
 				</Card>
 			</div>

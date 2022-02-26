@@ -16,7 +16,7 @@ const Header = () => {
 	}
 
 	return (
-		<header className='header'>
+		<header className='header' id="header">
 			<nav className='header__navigation navigation'>
 				<ul className="navigation__list">
 					<li className="navigation__item">
