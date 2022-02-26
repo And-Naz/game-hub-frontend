@@ -1,8 +1,7 @@
 import { useCallback, useState } from 'react'
 import AuthService from '../services/AuthService'
-import { setAuth, setUser } from '../store/authReducerDuck'
+import { setAuth, setUser } from '../store/reducers/authReducerDuck'
 import { useDispatch } from 'react-redux'
-import axios from 'axios'
 
 const storageName = 'game-hub'
 
@@ -68,7 +67,7 @@ const useAuth = () => {
 	const checkAuth = useCallback(async () => {
 		setReady(false)
 		try {
-			const res = await axios.get(process.env.REACT_APP_API + '/auth/refresh', { withCredentials: true })
+			const res = await AuthService.refresh()
 			if (res.status === 201) {
 				localStorage.setItem(storageName, res.accessToken)
 				dispatch(setAuth(true))

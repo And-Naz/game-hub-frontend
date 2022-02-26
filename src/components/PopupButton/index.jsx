@@ -1,4 +1,4 @@
-import { useState, forwardRef, useCallback,useRef,useEffect} from "react";
+import { useState, forwardRef, useCallback, useRef, useEffect } from "react";
 import "./style.css"
 const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 	const popup = useRef()
@@ -7,13 +7,13 @@ const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 	const onClose = useCallback(() => { setShowPopup(false) }, [])
 	const outClickPopup = useCallback((event) => {
 		const popupCheck = popup.current?.contains(event.target)
-		if(!popupCheck && showPopup){
+		if (!popupCheck && showPopup) {
 			onClose()
 		}
-	},[showPopup])
+	}, [showPopup])
 
 	useEffect(() => {
-		if(showPopup){
+		if (showPopup) {
 			document.addEventListener('click', outClickPopup)
 		}
 		return () => {

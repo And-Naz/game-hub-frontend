@@ -1,28 +1,106 @@
-.bag-wrapper {
-    position: absolute;
-    width: 400px;
-    height: auto;
-    border: 2px solid white;
-    background: rgba(81, 81, 100, 0.6);
-    right: 10px;
-    top: 100px;
-    opacity: 1;
+.game__list {
+	position: absolute;
+	width: 400px;
+	height: auto;
+	border: 2px solid white;
+	background: #343434;
+	right: -175px;
+	top: 0px;
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
 }
+.game__list__container {
+	display: flex;
+	flex-direction: column;
+	max-height: 450px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.game__list__element {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.game__list__element + .game__list__element {
+	margin-top: 15px;
+}
+
+.game__list__element:last-child {
+	margin-bottom: 25px;
+}
+
+.game__list__info {
+	display: flex;
+	flex-direction: column;
+	max-width: 320px;
+	position: relative;
+}
+
+.game__list__info::after {
+	display: block;
+	position: absolute;
+	content: '';
+	width: 3px;
+	height: 90%;
+	background-color: white;
+	right: -4px;
+	top: 5%;
+}
+
+.game__list__title {
+	font-size: 17px;
+	padding-left: 15px;
+}
+.game__list__desc {
+	font-size: 12px;
+	overflow: hidden;
+	overflow-y: auto;
+	max-width: 280px;
+	max-height: 300px;
+	word-break: break-all;
+}
+.game__list__controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.game__list__price {
+	font-size: 17px;
+}
+
+.game__list__total {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 5px 0;
+}
+.game__list__total > button {
+	margin-left: auto;
+	margin-top: 0;
+}
+.game__list__total__price {
+	font-size: 17px;
+	padding-left: 15px;
+}
+
+/*
 
 .styles--sc-card {
     display: flex;
-    /*vertical-align: center;*/
-    /*justify-content: space-between;*/
-
-
-
     font-family: Lato,sans-serif;
     letter-spacing: .06em;
     color: white;
     position: relative;
     background-color: transparent;
     cursor: pointer;
+<<<<<<< HEAD
     transform: skew(-7deg);
+=======
+>>>>>>> change-date-to-redux
 
     padding: 0px 30px;
     margin: 0px 5px 10px;
@@ -77,4 +155,4 @@ a {
 .styles--sc-card__column-wrapper > div {
     overflow: hidden;
     margin-top: 10px;
-}
+} */

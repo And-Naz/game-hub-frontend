@@ -1,4 +1,4 @@
-import api from "../api"
+import api, { axios } from "../api"
 import AuthResponse from "../models/AuthResponse"
 
 export default class AuthService {
@@ -37,5 +37,9 @@ export default class AuthService {
 			console.log(e);
 			return null
 		}
+	}
+
+	static async refresh() {
+		return await axios.get(process.env.REACT_APP_API + '/auth/refresh', { withCredentials: true })
 	}
 }

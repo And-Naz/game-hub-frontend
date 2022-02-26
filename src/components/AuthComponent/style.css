@@ -96,3 +96,8 @@ label{
 	margin: 3px;
 	margin-top: 0;
 }
+
+.authorized-section {
+	display: flex;
+	justify-content: center;
+}

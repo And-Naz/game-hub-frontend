@@ -7,7 +7,7 @@ import newTabSVG from "../../../assets/tray/newtab.svg"
 import { useCallback } from 'react';
 import "./style.css"
 
-const Tray = ({setIsFullscreen,info=[],goBack}) => {
+const Tray = ({setIsFullscreen,iframeUrl,goBack}) => {
     const handleNewWindow = useCallback(()=>{
         goBack()
         const url = '/games/game/1/fullscreen'
@@ -19,7 +19,7 @@ const Tray = ({setIsFullscreen,info=[],goBack}) => {
         <div className='game-play__tray tray'>
            <div className="tray__playh2" style={{backgroundImage:`url(${playh2Img})`}}><h2>Играть онлайн</h2></div>
            <div className='tray__iframe-box'>
-                <TrayIframe srcGame={info.src}/>
+                <TrayIframe srcGame={iframeUrl}/>
            </div>
             <div className='tray__wrapper-box wrapper-box'>
                 <Link to={'fullscreen'}>

@@ -4,7 +4,7 @@ import Price from "../Price"
 import style from "./style.module.css"
 
 const DiscountsContent = (props) =>{
-    const {name,rating,price,sale,saleFrom} = props
+    const { name, rating, price, isDiscounted, percentOfDiscount } = props
     return (
         <div className={style['bottom-info']}>
             <h4>{name} </h4>
@@ -13,7 +13,11 @@ const DiscountsContent = (props) =>{
                    <Rating rating={rating}/>
                 </div>
                 <div className="col">
-                    <Price price={price} sale={sale} saleFrom={saleFrom}/>
+                    <Price
+						price={price}
+						isDiscounted={isDiscounted}
+						percentOfDiscount={percentOfDiscount}
+					/>
                 </div>
             </div>
         </div>

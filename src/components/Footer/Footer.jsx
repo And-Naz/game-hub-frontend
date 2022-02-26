@@ -1,7 +1,7 @@
 import React from "react";
-import './Footer.css';
 import PartnersSlider from "./PartnersSlider/PartnersSlider";
 import FooterC from "../FooterSocial";
+import './Footer.css';
 
 const Footer = () => {
 

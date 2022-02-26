@@ -1,13 +1,12 @@
 import { forwardRef, useState, useCallback, useEffect } from "react"
 import { useSelector } from "react-redux";
-import useAuth from "../../hooks/useAuth";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
+import AfterSignIn from "./AfterSignIn";
 
 const getIsAuth = state => state.auth.isAuth
 
 const AuthComponent = forwardRef(function (props, ref) {
-	const { logout } = useAuth()
 	const isAuth = useSelector(getIsAuth)
 	const [showProfileControls, setShowProfileControls] = useState(false)
 	const [isSignIn, setIsSignUp] = useState(true)
@@ -21,7 +20,7 @@ const AuthComponent = forwardRef(function (props, ref) {
 	}, [isAuth])
 	return (
 		showProfileControls
-			? (<button onClick={e => logout()}>Logount</button>)
+			? (<AfterSignIn />)
 			: (isSignIn
 				? <SignIn toggleForm={toggleForm} />
 				: <SignUp toggleForm={toggleForm} />

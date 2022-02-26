@@ -1,38 +1,54 @@
-import {useState,useEffect,useCallback} from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { updateGamePageGames } from "../../store/reducers/gamesReducerDuck"
+import GameService from "../../services/GameService"
 import GamesList from "../../components/GamesList"
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import './style.css'
-
-function Games({cardsInfo}) {
-	let gameInfo = [...cardsInfo]
+function getGames(state) {
+	return state.games.gamePage
+}
+function Games({ cardsInfo }) {
+	const gamesAll = useSelector(getGames)
+	const dispatcher = useDispatch()
+	useEffect(() => {
+		GameService.all()
+			.then(
+				res => {
+					dispatcher(updateGamePageGames(res))
+				},
+				console.log
+			)
+	}, [])
+	// let gameInfo = [...gamesAll]
 	const params = useParams()
-	const [games,setGames] = useState([])
+	const [games, setGames] = useState([])
 
-	useEffect(()=>{
-		if(params.category){
-			
-			gameInfo = gameInfo.filter(el=>{
+	useEffect(() => {
+		if (params.category) {
+
+			gamesAll = gamesAll.filter(el => {
 				let flag
-				if(Array.isArray(el[params.category])){
-					flag = el[params.category].find(item=>{
+				if (Array.isArray(el[params.category])) {
+					flag = el[params.category].find(item => {
 						return item.name === params.name
 					})
-				}else{
+				} else {
 					flag = el[params.category].name === params.name ? el : null
 				}
-					
-				if(flag){
+
+				if (flag) {
 					return el
 				}
 			})
 		}
-		setGames(gameInfo)
-    },[params])
-	
+		setGames(gamesAll)
+	}, [params])
+
 	return (
 		<section className="games">
-			<GamesList info={games}/>
+			<GamesList info={gamesAll} />
 		</section>
 	);
 }

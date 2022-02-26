@@ -1,10 +1,8 @@
 import {useState,useCallback} from 'react';
 import "./style.css"
-import React from "react";
-const Description = ({info}) => {
+const Description = ({description}) => {
     const  [wrapper,setWrapper] = useState(true)
     const handleWrapperChange = useCallback(()=>{
-        console.log()
         setWrapper(prev=>prev=!prev)
     },[wrapper])
     return (
@@ -13,7 +11,7 @@ const Description = ({info}) => {
             <div className="description__infotext">
                 <div className={`description__content-wrapper ${!!wrapper?"contracted":"expanded"} `}>
                     <p>
-                        {info.description}
+                        {description}
                         <span className="contracted__gnv"> © GameHub</span>
                     </p>
                 </div>

@@ -8,9 +8,9 @@ const NewsBox = ({info,content}) => {
     return (
             <div className="news-box container">
                <YouplayBox name={content} href={false}/>
-               { info.slice(-4,-1).map(el =>
+               { info.map(el =>
                     <article key={el.id} className='news'>
-                        <Card data={el} content={content}/>
+                        <Card data={el.game} content={content}/>
                         <NewsContent data={el}/>
                     </article>
                 )}
