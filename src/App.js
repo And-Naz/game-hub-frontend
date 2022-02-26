@@ -17,6 +17,7 @@ function App() {
 			<main className="page-wrapper">
 				<Pages />
 			</main>
+
 		</>
 	);
 }
