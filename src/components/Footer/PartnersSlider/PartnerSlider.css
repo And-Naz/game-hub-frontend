@@ -21,6 +21,10 @@ Partners Carousel styles
     overflow: hidden;
 }
 
+.slick-arrow {
+	display: none;
+}
+
 .partner-image {
 
     border-radius: 50%;
