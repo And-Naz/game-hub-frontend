@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body footer .social .social-icons {
-    max-width: none;
+    max-width: 100%;
 }
 
 footer .social .social-icons {
@@ -119,24 +119,24 @@ footer .social .social-icons {
     margin-top: -2rem;
 }
 
-footer .social .social-icons .social-icon>a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(8,3,37,.3);
-    -webkit-transition: .3s background ease;
-    -o-transition: .3s background ease;
-    transition: .3s background ease;
-    -webkit-transform: skew(-7deg);
-    -ms-transform: skew(-7deg);
-    transform: skew(-7deg);
-    -webkit-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-}
+/*footer .social .social-icons .social-icon>a::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    background: rgba(8,3,37,.3);*/
+/*    -webkit-transition: .3s background ease;*/
+/*    -o-transition: .3s background ease;*/
+/*    transition: .3s background ease;*/
+/*    -webkit-transform: skew(-7deg);*/
+/*    -ms-transform: skew(-7deg);*/
+/*    transform: skew(-7deg);*/
+/*    -webkit-transform-origin: 50% 50%;*/
+/*    -ms-transform-origin: 50% 50%;*/
+/*    transform-origin: 50% 50%;*/
+/*}*/
 
 
 

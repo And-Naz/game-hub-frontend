@@ -105,6 +105,9 @@ export default function bagReducer(state = defaultState, {type, payload} = {}) {
         case "bagReducer/DELETE_BAG_ITEM": {
             return {...state, bagData: state.bagData.filter((item) => item.id !== payload ) }
         }
+        case "bagReducer/addToBag": {
+            return {...state, bagData: state.bagData.push( payload ) }
+        }
         default:
             return state;
     }
@@ -115,12 +118,15 @@ export const setBag = () => ({
     type: 'bagReducer/SET_BAG'
 });
 
+export const addToBag = (payload) => ({
+    type: 'bagReducer/ADD_TO_BAG',
+    payload
+});
+
 export const deleteItem = (payload) => ({
     type: 'bagReducer/DELETE_BAG_ITEM',
     payload
 })
-// export const setBag = function () {
-//     return {type: 'bagReducer/SET_BAG'}
-// }
+
 
 // export const setUser = Asynchronous(SET_USER)

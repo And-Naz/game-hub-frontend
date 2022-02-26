@@ -4,18 +4,22 @@ import useAuth from '../../hooks/useAuth';
 import './style.css'
 import React from "react";
 import {useSelector, useDispatch} from "react-redux"
-import {deleteItem, setBag} from "../../store/bagReducer";
+import {deleteItem, setBag, addToBag} from "../../store/bagReducer";
 
 
 function ShoppingCard({toggleForm}) {
     const dispatch = useDispatch();
     const {isOpen, bagData} = useSelector(state => state.bag)
+    const {totalPrice, setTotalPrice} = useSelector(state => state.bag.bagData.reduce(
+        function(acc, item) {return acc + item.price
+        } ,0))
     // const gameInfo = useSelector(state => state.gamesInfo)
     // console.log(isOpen)
     console.log(bagData)
 
-    function pay() {
 
+    function pay() {
+       alert("You successfully paid")
     }
 
     return (
@@ -46,16 +50,31 @@ function ShoppingCard({toggleForm}) {
                                     </div>
                                 </div>
                             </div>
+
+                        <div className="styles--sc-card__column-wrapper">
+                            <p><strong>Price: {item.price} $</strong></p>
+                            <button data-purpose="shopping-cart-addToBag" type="button"
+                                    className="btn btn-lg btn-primary btn-block"
+                                    onClick={addToBag(item)}
+                            >Buy
+                            </button>
+                            <button data-purpose="shopping-cart-addToBag" type="button"
+                                    className="btn btn-lg btn-primary btn-block"
+                                    onClick={deleteItem(item)}
+                            >Delete
+                            </button>
+                        </div>
                         </div>
                     </div>
                 ))}
-            <div className="styles--sc-card__container styles--sc-card2">
-                <button data-purpose="shopping-cart-checkout" type="button"
-                        className="btn btn-lg btn-primary btn-block"
-                        onClick={pay}
-                >Checkout
-                </button>
-            </div>
+                <div className="styles--sc-card__container styles--sc-card2">
+                    <p><strong>Total: Total_Price $</strong></p>
+                    <button type="button"
+                            className="btn btn-lg btn-primary btn-block"
+                            onClick={pay}
+                    >Checkout
+                    </button>
+                </div>
             </div>
             : null
     )
