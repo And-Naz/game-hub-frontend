@@ -39,8 +39,16 @@
 	align-items: center;
 }
 
+.navigation__list.navigation__list__column {
+	flex-direction: column;
+}
+
 .navigation__list + .navigation__list {
 	margin-left: 5rem;
+}
+
+.navigation-column .navigation__list + .navigation__list {
+	margin-left: 0;
 }
 
 .navigation__item {
