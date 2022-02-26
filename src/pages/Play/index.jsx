@@ -1,39 +1,44 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { updateGamePageGames } from "../../store/reducers/gamesReducerDuck"
+import { addGamePageGames } from "../../store/reducers/gamesReducerDuck"
 import GameService from "../../services/GameService"
 import GamePLay from "../../components/GamePLay"
 import './style.css'
 
 function getGames(state) {
-	return state.games.gamePage
+	return state.games
 }
 function Play() {
-	const gamesAll = useSelector(getGames)
-	const dispatcher = useDispatch()
-	const [game, setGame] = useState(null)
 	const params = useParams()
+	const gamesAll = useSelector(getGames)
+	const [game, setGame] = useState(null)
+	const dispatcher = useDispatch()
+
 	useEffect(() => {
-		GameService.all()
-			.then(
-				res => {
-					dispatcher(updateGamePageGames(res))
-				},
-				console.log
-			)
-	}, [])
-	
-	// const gameInfo = [...gamesAll]
-	useEffect(() => {
-		if (gamesAll[params.id - 1]) {
-			setGame(gamesAll[params.id - 1])
+		console.log(params);
+		const necessaryGameFromHomePage = gamesAll.homePage.find(g => (g.id).toString() === params.id)
+		if (necessaryGameFromHomePage) {
+			return setGame(necessaryGameFromHomePage)
 		}
-	}, [params])
+		const necessaryGameFromGamePage = gamesAll.gamePage.find(g => (g.id).toString() === params.id)
+		if (necessaryGameFromGamePage) {
+			return setGame(necessaryGameFromGamePage)
+		}
+		(async () => {
+			try {
+				const response = await GameService.getGame(params.id)
+				await dispatcher(addGamePageGames(response))
+				// await setGame(response)
+			} catch (error) {
+				alert("Game doesn't exist.")
+			}
+		})()
+	}, [])
 
 	return (
 		<section className="games">
-			{game ? <GamePLay info={game} similarGames={gamesAll} content={"Similar Games"} params={params} /> : null}
+			{game ? <GamePLay info={game} similarGames={gamesAll.homePage} content={"Similar Games"} params={params} /> : null}
 		</section>
 	);
 }

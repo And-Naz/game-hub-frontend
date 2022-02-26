@@ -22,7 +22,7 @@ function Home() {
 	const games = useSelector(getGames)
 	const latestNews = useSelector(getLatestNews)
 	useEffect(() => {
-		GameService.all({ limit: 4 })
+		GameService.gameForHomePage()
 			.then(
 				res => {
 					dispatcher(updateHomePageGames(res))
