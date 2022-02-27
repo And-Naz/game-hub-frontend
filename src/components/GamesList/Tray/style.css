@@ -1,0 +1,9 @@
+.game-list_tray.tray {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,215px));
+    justify-content: space-around;
+    grid-gap: 10px 0px;
+    background-color: #111111;
+    box-shadow: 0px 0px 3px 1px #868181;
+    padding: 10px 0px;
+}

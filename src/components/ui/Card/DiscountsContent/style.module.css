@@ -1,0 +1,36 @@
+.bottom-info {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    width: 80%;
+}
+.bottom-info h4 {
+    position: relative;
+    margin-top: 1.8rem;
+    margin-bottom: 3rem!important;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.bottom-info h4::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 15%;
+    bottom: -1.5rem;
+    left: 15%;
+    height: 1px;
+    background: rgba(255,255,255,.2);
+}
+
+@media only screen and (max-width: 1200px) {
+    .over-info h4 {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .over-info h4 {
+        font-size: 16px;
+    }
+}

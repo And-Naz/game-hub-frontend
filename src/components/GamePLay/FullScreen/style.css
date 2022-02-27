@@ -1,0 +1,42 @@
+.header{
+  /* display: none; */
+}
+.full-screen{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 40000;
+}
+.full-screen__iframe-box {
+  height: 100%;
+}
+
+.full-screen>button{
+    position: fixed;
+    left: 15px;
+    top: 30px;
+    background: #0000;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    opacity: .7;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.full-screen>button:hover{
+  opacity: 1;
+
+}
+.full-screen>button:hover img{
+  transition: .2s;
+}
+.full-screen>button:hover img{
+  width: 25px;
+  height: 25px;
+}

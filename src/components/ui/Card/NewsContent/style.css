@@ -1,0 +1,10 @@
+/* .over-info{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+} */
+.card__content.news-content{
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+}
