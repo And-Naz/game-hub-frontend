@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Pages from "./pages"
 import useAuth from "./hooks/useAuth";
 import './assets/css/App.css';
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	const { checkAuth } = useAuth()
@@ -17,6 +18,7 @@ function App() {
 			<main className="page-wrapper">
 				<Pages />
 			</main>
+			<Footer />
 		</>
 	);
 }

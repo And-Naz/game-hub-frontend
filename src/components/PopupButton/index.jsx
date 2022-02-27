@@ -1,19 +1,19 @@
-import { useState, forwardRef, useCallback,useRef,useEffect} from "react";
+import { useState, forwardRef, useCallback, useRef, useEffect } from "react";
 import "./style.css"
-const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
+const PopupButton = forwardRef(function ({ children, popupElement, hide = false }, ref) {
 	const popup = useRef()
 	const [showPopup, setShowPopup] = useState(false)
 	const onOpen = useCallback(() => { setShowPopup(true) }, [])
 	const onClose = useCallback(() => { setShowPopup(false) }, [])
 	const outClickPopup = useCallback((event) => {
 		const popupCheck = popup.current?.contains(event.target)
-		if(!popupCheck && showPopup){
+		if (!popupCheck && showPopup) {
 			onClose()
 		}
-	},[showPopup])
+	}, [showPopup])
 
 	useEffect(() => {
-		if(showPopup){
+		if (showPopup) {
 			document.addEventListener('click', outClickPopup)
 		}
 		return () => {
@@ -29,7 +29,7 @@ const PopupButton = forwardRef(function ({ children, popupElement }, ref) {
 					</span>
 				)
 			}
-			<span className='popup-btn__caret'></span>
+			{!hide && <span className='popup-btn__caret'></span>}
 			{
 				showPopup &&
 				<div className="popup-btn__popup-element" ref={popup} >
