@@ -11,7 +11,7 @@ const Rating = ({ price, isDiscounted, percentOfDiscount }) => {
 								<span className="woocommerce-Price-currencySymbol">
 									$
 								</span>
-								{price}
+								{(price * (100 - percentOfDiscount))/100}
 							</>
 						)
 						: 'Free'

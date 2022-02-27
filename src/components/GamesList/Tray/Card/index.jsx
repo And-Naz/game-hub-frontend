@@ -13,7 +13,7 @@ const {id,name,rating,imageSrc} = item
             <div className="game-card__f-rate">
                 <Rating rating={rating}/>
             </div>
-            {/* <div className="game-card__mqn">{item.year.name}</div> */}
+            <div className="game-card__mqn">2022</div>
         </Link>
     );
 }

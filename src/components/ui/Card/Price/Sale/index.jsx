@@ -8,7 +8,7 @@ const Rating = ({ price, percentOfDiscount }) => {
 					>$
 					</span>
 					{
-						(price * (100 - percentOfDiscount))
+						price
 					}
 				</span>
 			</del>
