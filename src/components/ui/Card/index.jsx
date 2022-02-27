@@ -6,6 +6,7 @@ import DiscountsContent from "./DiscountsContent"
 import NewsContent from "./NewsContent"
 import Image from '../Image';
 import Loader from '../Loader';
+
 import "./style.css";
 
 
@@ -26,22 +27,14 @@ const Card = forwardRef(({ data, content, ...otherProps }, ref) => {
 				{
 					content === "Games" ?
 						<GamesContent
-							name={name}
-							rating={rating}
-							price={price}
-							isDiscounted={isDiscounted}
-							percentOfDiscount={percentOfDiscount}
+						info={data}
 						/>
 						: null
 				}
 				{
 					content === "Discounts" ?
 						<DiscountsContent 
-							name={name} 
-							rating={rating} 
-							price={price} 
-							isDiscounted={isDiscounted} 
-							percentOfDiscount={percentOfDiscount} 
+							info={data}
 						/>
 						: null
 				}

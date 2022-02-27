@@ -5,7 +5,7 @@ import "./style.css"
 
 const initialDefault = {
 	dots: false,
-	adaptiveHeight: true,
+	adaptiveHeight: false,
 	arrows: false,
 	slidesToShow: getCount()
 }

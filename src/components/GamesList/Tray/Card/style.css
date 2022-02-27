@@ -50,4 +50,6 @@ a.game-list__game-card.tray__game-card.game-card span {
     width: 45px;
     text-align: center;
 }
-
+.game-list__game-card.tray__game-card.game-card img{
+    margin: auto;
+}

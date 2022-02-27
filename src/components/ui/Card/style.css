@@ -34,7 +34,20 @@
     -webkit-backface-visibility: hidden;
     max-height: 230px;
 }
-
+.card__shape button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+    color: black;
+}
+.card__shape:hover button{
+    opacity: 1;
+    visibility: visible;
+}
 .card__img{
     width: 100%;
     -webkit-transition: .3s opacity ease;

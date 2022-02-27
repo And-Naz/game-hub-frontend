@@ -22,7 +22,7 @@ export default function gamesReducer(state = defaultState, { type, payload } = {
 			return { ...state, gamePage: [...payload] }
 		}
 		case ADD_GAME_PAGE_GAMES: {
-			return { ...state, gamePage: state.gamePage.concat(payload) }
+			return { ...state, homePage: state.homePage.concat(payload) }
 		}
 		default: return state;
 	}
